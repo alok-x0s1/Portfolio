@@ -7,12 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary-bg-light": "#F5F5F5",
-        "primary-color-light": "#000000",
-        "secondary-color-light": "#33E092",
+        "primary-bg-light": "#F0F0F0",
+        "primary-color-light": "#040303",
+        "secondary-color-light": "#E7473C",
         "primary-bg-dark": "#161619",
         "primary-color-dark": "#F5F5F5",
-      }
+      },
+      fontFamily: {
+        "poppins": ["Poppins", "sans-serif"],
+        "ubuntu": ["Ubuntu", "sans-serif"],
+        "infant": ["Ysabeau Infant", "sans-serif"],
+        "inter": ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],

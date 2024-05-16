@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../../public/logo.png";
 import { Link, NavLink } from "react-router-dom";
-import ResumeBtn from "../ResumeBtn";
+import CustomBtn from "../CustomBtn";
 
 const Header = () => {
 
@@ -13,30 +13,30 @@ const Header = () => {
   ];
 
   return (
-    <div className="w-full px-6 py-2 bg-primary-bg-light text-primary-color-light flex justify-between items-center gap-4">
+    <div className="w-full static top-0 px-6 py-2 bg-primary-bg-light text-primary-color-light flex justify-between items-center gap-4">
       <div id="left">
         <Link to="/">
           <img src={logo} alt="logo" width={50} />
         </Link>
       </div>
 
-      <div id="right" className="flex gap-12 items-center pr-8">
+      <div id="right" className="flex gap-10 items-center pr-12">
         <ul className="flex gap-8 mr-6">
           {navItems.map((item) => (
             <li key={item.id}>
             <NavLink
             to={item.slug}
             className={({isActive}) =>
-              `${isActive ? "text-secondary-color-light" : "text-primary-color-light"}`
+              `${isActive ? "text-secondary-color-light" : "text-primary-color-light"} font-medium flex gap-2`
           }
             >
-              <span className="text-secondary-color-light">0{item.id}. </span> {" "}{item.name}
+              <span className="text-primary-color-light">0{item.id}. </span> {" "}{item.name}
             </NavLink>
           </li>
           ))}
         </ul>
 
-        <ResumeBtn />
+        <CustomBtn name="Resume" />
       </div>
     </div>
   );
