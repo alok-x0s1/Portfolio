@@ -11,18 +11,22 @@ const AboutCard = () => {
       </div>
       <p className="w-2/3 text-lg">
         Hello! I'm{" "}
-        <span className="text-secondary-color-light">Alok Yadav</span> a
-        passionate creator of digital experiences from{" "}
-        <span className="text-secondary-color-light">Up, India</span> . My
-        journey into web development began started back in 2023 when I first
-        experimented with customizing profile cards. What started as a simple
-        exploration soon led me to create engaging experiences like the heart
-        effect you see here, using HTML, CSS, and JavaScript.
+        <span className="anchor-hover">
+          Alok Yadav
+        </span>{" "}
+        a passionate creator of digital experiences from{" "}
+        <span className="anchor-hover">
+          UP, India
+        </span>{" "}
+        . My journey into web development began started back in 2023 when I
+        first experimented with customizing profile cards. What started as a
+        simple exploration soon led me to create engaging experiences like the
+        heart effect you see here, using HTML, CSS, and JavaScript.
       </p>
 
       <p className="w-2/3 text-lg mb-12">
-        I completed my Bachelor's degree in Computer application from{" "}
-        <span className="text-secondary-color-light">
+        I'm pursuing my Bachelor's degree in Computer application from{" "}
+        <span className="anchor-hover">
           VBS Purvanchal University
         </span>{" "}
         .The initial exploration into HTML and CSS ignited a passion that has

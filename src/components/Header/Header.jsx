@@ -13,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="w-full static top-0 px-6 py-2 bg-primary-bg-light text-primary-color-light flex justify-between items-center gap-4">
+    <div className="w-full top-0 px-6 py-2 bg-primary-bg-light text-primary-color-light flex justify-between items-center gap-4">
       <div id="left">
         <Link to="/">
           <img src={logo} alt="logo" width={50} />

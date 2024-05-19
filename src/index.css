@@ -22,3 +22,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.anchor-hover {
+  @apply border-b border-dotted border-secondary-color-light/40 text-secondary-color-light;
+}
