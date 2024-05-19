@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <div className="bg-primary-bg-light">
       <Container>
-        <div className="flex flex-col items-start pt-16 w-3/4 pl-8">
+        <div className="flex flex-col items-start pt-16 w-2/3 pl-8">
           <p className="text-secondary-color-light text-3xl font-ubuntu">
             Hy, my name is
           </p>
-          <h1 className="text-8xl font-ubuntu font-medium leading-snug">
+          <h1 className="text-8xl max-[836px]:text-7xl font-ubuntu font-medium leading-snug">
             Alok Yadav.
           </h1>
           {/* <h3 className="text-7xl font-medium font-ubuntu opacity-75 leading-tight tracking-tighter">Weaving Web with Code Mastery</h3> */}
@@ -20,7 +20,7 @@ const Home = () => {
           </p>
 
           <div className="mt-6">
-          <CustomBtn name="Connect with me!" classname="w-[175px]" />
+          <CustomBtn name="Connect with me!" classname="w-[175px] h-[42px]" />
           </div>
         </div>
       </Container>

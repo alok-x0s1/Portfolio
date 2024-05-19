@@ -23,14 +23,14 @@ const Header = () => {
       <div id="right" className="flex gap-10 items-center pr-12">
         <ul className="flex gap-8 mr-6">
           {navItems.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} className="group">
             <NavLink
             to={item.slug}
             className={({isActive}) =>
               `${isActive ? "text-secondary-color-light" : "text-primary-color-light"} font-medium flex gap-2`
           }
             >
-              <span className="text-primary-color-light">0{item.id}. </span> {" "}{item.name}
+              <span className="text-primary-color-light">0{item.id}. </span> {" "} <div className="group-hover:text-secondary-color-light duration-300">{item.name}</div>
             </NavLink>
           </li>
           ))}
