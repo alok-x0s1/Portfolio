@@ -36,7 +36,11 @@ const Header = () => {
           ))}
         </ul>
 
+        <Link
+        to='/resume'
+        >
         <CustomBtn name="Resume" />
+        </Link>
       </div>
     </div>
   );
