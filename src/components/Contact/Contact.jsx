@@ -27,7 +27,7 @@ const Contact = () => {
     <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-8">
       <div className="flex gap-2 items-center">
         <h1 className="text-2xl font-ubuntu font-normal">
-          <span className="text-secondary-color-light">03.</span> Contact me
+          <span className="text-secondary-color-light">04.</span> What's next?
         </h1>
         <p className="w-80 h-[1px] bg-secondary-color-light opacity-80"></p>
       </div>

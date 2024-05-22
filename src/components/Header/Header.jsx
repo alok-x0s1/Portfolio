@@ -5,9 +5,9 @@ import CustomBtn from "../CustomBtn";
 
 const Header = () => {
   const navItems = [
-    { id: 1, name: "About", slug: "/about" },
-    { id: 2, name: "Work", slug: "/work" },
-    { id: 3, name: "Blogs", slug: "/blogs" },
+    { id: 1, name: "Home", slug: "/" },
+    { id: 2, name: "About", slug: "/about" },
+    { id: 3, name: "Work", slug: "/work" },
     { id: 4, name: "Contact", slug: "/contact" },
   ];
 
