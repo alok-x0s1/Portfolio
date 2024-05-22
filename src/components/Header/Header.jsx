@@ -4,12 +4,11 @@ import { Link, NavLink } from "react-router-dom";
 import CustomBtn from "../CustomBtn";
 
 const Header = () => {
-
   const navItems = [
-    { id: 1, name: "Home", slug: "/" },
-    { id: 2, name: "About", slug: "/about" },
-    { id: 3, name: "Experience", slug: "/experience" },
-    { id: 4, name: "Contact", slug: "/contact" },
+    { id: 1, name: "About", slug: "/about" },
+    { id: 2, name: "Work", slug: "/work" },
+    { id: 3, name: "Contact", slug: "/contact" },
+    { id: 4, name: "Blogs", slug: "/blogs" },
   ];
 
   return (
@@ -24,22 +23,27 @@ const Header = () => {
         <ul className="flex gap-8 mr-6">
           {navItems.map((item) => (
             <li key={item.id} className="group">
-            <NavLink
-            to={item.slug}
-            className={({isActive}) =>
-              `${isActive ? "text-secondary-color-light" : "text-primary-color-light"} font-medium flex gap-2`
-          }
-            >
-              <span className="text-primary-color-light">0{item.id}. </span> {" "} <div className="group-hover:text-secondary-color-light duration-300">{item.name}</div>
-            </NavLink>
-          </li>
+              <NavLink
+                to={item.slug}
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "text-secondary-color-light"
+                      : "text-primary-color-light"
+                  } font-medium flex gap-2`
+                }
+              >
+                <span className="text-primary-color-light">0{item.id}. </span>{" "}
+                <div className="group-hover:text-secondary-color-light duration-300">
+                  {item.name}
+                </div>
+              </NavLink>
+            </li>
           ))}
         </ul>
 
-        <Link
-        to='/resume'
-        >
-        <CustomBtn name="Resume" />
+        <Link to="/resume">
+          <CustomBtn name="Resume" />
         </Link>
       </div>
     </div>

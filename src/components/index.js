@@ -5,6 +5,7 @@ import Container from "./Container";
 import CustomBtn from "./CustomBtn";
 import About from "./About/About";
 import GithubCalendar from "./About/GithubCalendar";
+import Contact from "./Contact/Contact";
 
 export {
     Header,
@@ -13,5 +14,6 @@ export {
     Container,
     CustomBtn,
     About,
-    GithubCalendar
+    GithubCalendar,
+    Contact
 }
