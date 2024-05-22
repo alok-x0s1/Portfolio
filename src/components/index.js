@@ -6,6 +6,7 @@ import CustomBtn from "./CustomBtn";
 import About from "./About/About";
 import GithubCalendar from "./About/GithubCalendar";
 import Contact from "./Contact/Contact";
+import Work from "./Work/Work"
 
 export {
     Header,
@@ -15,5 +16,6 @@ export {
     CustomBtn,
     About,
     GithubCalendar,
-    Contact
+    Contact,
+    Work
 }

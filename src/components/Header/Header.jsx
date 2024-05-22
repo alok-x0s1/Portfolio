@@ -7,8 +7,8 @@ const Header = () => {
   const navItems = [
     { id: 1, name: "About", slug: "/about" },
     { id: 2, name: "Work", slug: "/work" },
-    { id: 3, name: "Contact", slug: "/contact" },
-    { id: 4, name: "Blogs", slug: "/blogs" },
+    { id: 3, name: "Blogs", slug: "/blogs" },
+    { id: 4, name: "Contact", slug: "/contact" },
   ];
 
   return (

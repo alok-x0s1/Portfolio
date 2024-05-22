@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import {Error} from './components'
-import {Home, About, Contact} from "./pages/index.js"
+import {Home, About, Contact, Work} from "./pages/index.js"
 
 
 const router = createBrowserRouter([
@@ -26,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />,
+        errorElement: <Error />
+      },
+      {
+        path: 'work',
+        element: <Work />,
         errorElement: <Error />
       },
     ]
