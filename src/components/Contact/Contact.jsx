@@ -24,15 +24,15 @@ const Contact = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12">
+    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-8">
       <div className="flex gap-2 items-center">
         <h1 className="text-2xl font-ubuntu font-normal">
           <span className="text-secondary-color-light">03.</span> Contact me
         </h1>
         <p className="w-80 h-[1px] bg-secondary-color-light opacity-80"></p>
       </div>
-      <div className="flex w-full justify-between flex-wrap">
-        <div className="flex w-[30%] flex-col gap-4">
+      <div className="flex flex-col lg:flex-row w-full gap-4 justify-between flex-wrap">
+        <div className="flex lg:w-[30%] w-2/3 flex-col gap-4">
           {arr &&
             arr.map((elem) => (
               <div key={elem.id}>
@@ -45,7 +45,7 @@ const Contact = () => {
             ))}
         </div>
 
-        <div className="w-2/3">
+        <div className="lg:w-2/3 w-full">
           <ContactRight />
         </div>
       </div>

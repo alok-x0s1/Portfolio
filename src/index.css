@@ -26,3 +26,7 @@ body {
 .anchor-hover {
   @apply border-b border-dotted border-secondary-color-light/40 text-secondary-color-light;
 }
+
+::selection {
+  background-color: #E7473C;
+}
