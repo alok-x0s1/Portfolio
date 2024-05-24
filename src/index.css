@@ -6,21 +6,34 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --scrollbar-width: 8px;
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #888;
+  --scrollbar-thumb-hover: #555;
+}
+
+.dark {
+  --scrollbar-track: #161619;
+  --scrollbar-thumb: #555;
+  --scrollbar-thumb-hover: #777;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--scrollbar-thumb-hover);
 }
 
 .anchor-hover {
@@ -28,5 +41,5 @@ body {
 }
 
 ::selection {
-  background-color: #E7473C;
+  background-color: #e7473c;
 }

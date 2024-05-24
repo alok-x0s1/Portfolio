@@ -3,7 +3,7 @@ import { Container, CustomBtn } from "../components";
 
 const Home = () => {
   return (
-    <div className="bg-primary-bg-light">
+    <div className="bg-primary-bg-light text-primary-color-light dark:text-primary-color-dark dark:bg-primary-bg-dark">
       <Container>
         <div className="flex flex-col items-start pt-16 w-2/3 pl-8">
           <p className="text-secondary-color-light text-3xl font-ubuntu">

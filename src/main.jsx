@@ -1,46 +1,47 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import {Error} from './components'
-import {Home, About, Contact, Work} from "./pages/index.js"
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Error } from "./components";
+import { Home, About, Contact, Work } from "./pages/index.js";
+import { Provider } from "react-redux";
+import store from "./app/store.js"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <Error />,
     children: [
       {
-        path: '',
+        path: "",
         element: <Home />,
-        errorElement: <Error />
+        errorElement: <Error />,
       },
       {
-        path: 'about',
+        path: "about",
         element: <About />,
-        errorElement: <Error />
+        errorElement: <Error />,
       },
       {
-        path: 'contact',
+        path: "contact",
         element: <Contact />,
-        errorElement: <Error />
+        errorElement: <Error />,
       },
       {
-        path: 'work',
+        path: "work",
         element: <Work />,
-        errorElement: <Error />
+        errorElement: <Error />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-    <App />
-    </RouterProvider>
-  </React.StrictMode>,
-)
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  </React.StrictMode>
+);

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutCard = () => {
   return (
-    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12">
+    <div className="w-full flex flex-col dark:text-primary-color-dark text-primary-color-light gap-12 justify-start pt-12 pl-12">
       <div className="flex gap-2 items-center">
         <h1 className="text-2xl font-ubuntu font-normal">
           <span className="text-secondary-color-light">02.</span> About me

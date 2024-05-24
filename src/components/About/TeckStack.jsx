@@ -20,7 +20,7 @@ const TeckStack = () => {
     { icon: <SiAppwrite />, name: "Appwrite" },
   ];
   return (
-    <div className="w-full flex justify-center items-center flex-col gap-12">
+    <div className="w-full flex justify-center dark:text-primary-color-dark text-primary-color-light items-center flex-col gap-12">
       <h1 className="text-5xl font-medium font-ubuntu">
         Professional{" "}
         <span className="text-secondary-color-light">Skillset</span>
@@ -29,7 +29,7 @@ const TeckStack = () => {
         {logos.map((logo) => (
           <div
           key={logo.name}
-            className="bg-primary-bg-light px-12 py-6 rounded-sm cursor-pointer border-2 border-secondary-color-light hover:-translate-y-2 duration-500 shadow-md shadow-secondary-color-light/50"
+            className="bg-primary-bg-light dark:bg-primary-bg-dark px-12 py-6 rounded-sm cursor-pointer border-2 border-secondary-color-light hover:-translate-y-2 duration-500 shadow-md shadow-secondary-color-light/50"
           >
             <div className="text-8xl">{logo.icon}</div>
           </div>

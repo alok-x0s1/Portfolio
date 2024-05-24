@@ -18,7 +18,7 @@ const Tools = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center items-center flex-col gap-12 mt-16">
+    <div className="w-full flex justify-center dark:text-primary-color-dark text-primary-color-light items-center flex-col gap-12 mt-16">
       <h1 className="text-5xl font-medium font-ubuntu">
         <span className="text-secondary-color-light mr-2">Tools</span> I use
       </h1>
@@ -26,7 +26,7 @@ const Tools = () => {
         {tools.map((tool) => (
           <div
             key={tool.name}
-            className="bg-primary-bg-light px-12 py-6 rounded-sm cursor-pointer border-2 border-secondary-color-light hover:-translate-y-2 duration-500 shadow-md shadow-secondary-color-light/50"
+            className="bg-primary-bg-light dark:bg-primary-bg-dark px-12 py-6 rounded-sm cursor-pointer border-2 border-secondary-color-light hover:-translate-y-2 duration-500 shadow-md shadow-secondary-color-light/50"
           >
             <div className="text-8xl">{tool.icon}</div>
           </div>

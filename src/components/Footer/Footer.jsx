@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary-bg-light text-primary-color-light border-t-2">
+    <footer className="bg-primary-bg-light dark:bg-primary-bg-dark dark:text-primary-color-dark text-primary-color-light border-t-2">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
           <img src={logo} alt="logo" width={75} />
@@ -35,10 +35,10 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `text-primary-color-light transition hover:text-secondary-color-light ${
+                `text-primary-color-light dark:text-primary-color-dark transition dark:hover:text-secondary-color-light hover:text-secondary-color-light ${
                   isActive
-                    ? "text-secondary-color-light underline"
-                    : "text-primary-color-light"
+                    ? "text-secondary-color-light dark:text-secondary-color-light underline"
+                    : "text-primary-color-light dark:text-primary-color-dark"
                 }`
               }
               to="/about"
@@ -50,7 +50,7 @@ const Footer = () => {
 
           <li>
             <Link
-              className="text-primary-color-light transition hover:text-secondary-color-light"
+              className="text-primary-color-light dark:text-primary-color-dark transition hover:text-secondary-color-light dark:hover:text-secondary-color-light"
               to="/"
             >
               {" "}
@@ -71,10 +71,10 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `text-primary-color-light transition hover:text-secondary-color-light ${
+                `text-primary-color-light dark:text-primary-color-dark transition  dark:hover:text-secondary-color-light hover:text-secondary-color-light ${
                   isActive
-                    ? "text-secondary-color-light underline"
-                    : "text-primary-color-light"
+                    ? "text-secondary-color-light dark:text-secondary-color-light underline"
+                    : "text-primary-color-light dark:text-primary-color-dark"
                 }`
               }
               to="/work"
@@ -87,10 +87,10 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `text-primary-color-light transition hover:text-secondary-color-light ${
+                `text-primary-color-light dark:text-primary-color-dark transition  dark:hover:text-secondary-color-light hover:text-secondary-color-light ${
                   isActive
-                    ? "text-secondary-color-light underline"
-                    : "text-primary-color-light"
+                    ? "text-secondary-color-light dark:text-secondary-color-light underline"
+                    : "text-primary-color-light dark:text-primary-color-dark"
                 }`
               }
               to="/contact"
@@ -102,7 +102,7 @@ const Footer = () => {
 
           <li>
             <Link
-              className="text-primary-color-light transition hover:text-secondary-color-light"
+              className="text-primary-color-light dark:text-primary-color-dark transition hover:text-secondary-color-light dark:hover:text-secondary-color-light"
               to="404"
             >
               404{" "}
@@ -116,7 +116,7 @@ const Footer = () => {
               href="https://github.com/alok-x0s1"
               rel="noreferrer"
               target="_blank"
-              className="text-primary-color-light text-xl"
+              className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
               <FaGithub className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
             </a>
@@ -126,7 +126,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/mr-x0s1/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary-color-light text-xl"
+              className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
               <FaLinkedin className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
             </a>
@@ -136,7 +136,7 @@ const Footer = () => {
               href="https://x.com/"
               rel="noreferrer"
               target="_blank"
-              className="text-primary-color-light text-xl"
+              className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
               <FaXTwitter className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
             </a>
@@ -146,7 +146,7 @@ const Footer = () => {
               href="https://instagram/mr_x0s1"
               rel="noreferrer"
               target="_blank"
-              className="text-primary-color-light text-xl"
+              className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
               <FaInstagram className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
             </a>
@@ -156,7 +156,7 @@ const Footer = () => {
               href="#"
               rel="noreferrer"
               target="_blank"
-              className="text-primary-color-light text-xl"
+              className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
               <FaGitlab className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
             </a>

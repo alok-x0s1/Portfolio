@@ -24,7 +24,7 @@ const Contact = () => {
     },
   ];
   return (
-    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-8">
+    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-8 dark:text-primary-color-dark text-primary-color-light">
       <div className="flex gap-2 items-center">
         <h1 className="text-2xl font-ubuntu font-normal">
           <span className="text-secondary-color-light">04.</span> What's next?
