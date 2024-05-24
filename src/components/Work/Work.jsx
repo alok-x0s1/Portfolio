@@ -1,10 +1,19 @@
 import React from "react";
 import Project from "./Project";
+import preview1 from "../../../public/preview1.png";
+import preview2 from "../../../public/preview2.png";
+import preview3 from "../../../public/preview3.png";
 
 const Work = () => {
-  const techStack = ["ReactJs", "Appwrite", "Redux", "React-router"];
+  const techStack = [
+    "ReactJs",
+    "Appwrite",
+    "Redux",
+    "React-router",
+    "TailwindCSS",
+  ];
   return (
-    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-8">
+    <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-20">
       <div className="flex gap-2 items-center">
         <h1 className="text-2xl font-ubuntu font-normal">
           <span className="text-secondary-color-light">03.</span> Some things
@@ -13,22 +22,50 @@ const Work = () => {
         <p className="w-80 h-[1px] bg-secondary-color-light opacity-80"></p>
       </div>
 
-      <div className="flex flex-col w-full gap-6">
-        <Project
-          name="SaverSync"
-          content="SaverSync is your go-to expense tracker for seamless financial management. Track expenses, plan budgets, and monitor savings all in one intuitive app."
-          githubLink="/"
-          liveLink="/"
-          techStack={techStack}
-        />
-        <div className="w-full flex justify-end">
-        <Project
-          name="SaverSync"
-          content="SaverSync is your go-to expense tracker for seamless financial management. Track expenses, plan budgets, and monitor savings all in one intuitive app."
-          githubLink="/"
-          liveLink="/"
-          techStack={techStack}
-        />
+      <div className="flex flex-col w-full gap-12">
+        <div className="flex flex-wrap justify-start items-center">
+          <Project
+            name="SaverSync"
+            content="SaverSync is your go-to expense tracker for seamless financial management. Track expenses, plan budgets, and monitor savings all in one intuitive app."
+            githubLink="https://github.com/alok-x0s1/SaverSync"
+            liveLink="/"
+            techStack={techStack}
+            className="z-10"
+          />
+          <div className="hidden h-72 md:block absolute left-[600px] rounded-md overflow-hidden">
+            <img src={preview1} alt="preview1" width={500} className="h-full" />
+            <div className="absolute inset-0 bg-secondary-color-light opacity-50 hover:opacity-0 transition-opacity duration-300"></div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-end items-center">
+          <div className="hidden h-72 md:block absolute right-[600px] rounded-md overflow-hidden">
+            <img src={preview2} alt="preview2" width={500} className="h-full" />
+            <div className="absolute inset-0 bg-secondary-color-light opacity-50 hover:opacity-0 transition-opacity duration-300"></div>
+          </div>
+          <Project
+            name="Frontify"
+            content="Frontify is a dynamic blog website built with React on the frontend and utilizing Appwrite as a Backend-as-a-Service (BaaS) solution. Appwrite handles functionalities like user authentication, database management, and file storage."
+            githubLink="https://github.com/alok-x0s1/frontify"
+            liveLink="/"
+            className="items-end z-10"
+            techStack={techStack}
+          />
+        </div>
+
+        <div className="flex flex-wrap justify-start items-center">
+          <Project
+            name="Password-Generator"
+            content="Introducing a sleek React Password Generator leveraging useRef, useEffect, and useCallback hooks. It automatically generates strong passwords, updates in real-time, and offers a quick copy feature for seamless integration."
+            githubLink="https://github.com/alok-x0s1/Password-Generator"
+            liveLink="https://password-generator-alok.vercel.app/"
+            techStack={["ReactJS", "TailwindCSS", "hooks"]}
+            className="z-10"
+          />
+          <div className="hidden h-72 md:block absolute left-[600px] rounded-md overflow-hidden">
+            <img src={preview3} alt="preview3" width={500} className="h-full" />
+            <div className="absolute inset-0 bg-secondary-color-light opacity-50 hover:opacity-0 transition-opacity duration-300 z-20"></div>
+          </div>
         </div>
       </div>
     </div>
