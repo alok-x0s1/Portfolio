@@ -41,13 +41,13 @@ const Header = () => {
                 className={({ isActive }) =>
                   `${
                     isActive
-                      ? "text-secondary-color-light"
+                      ? "text-secondary-color-light dark:text-secondary-color-dark"
                       : "text-primary-color-light dark:text-primary-color-dark"
                   } font-medium flex gap-2`
                 }
               >
                 <span className="text-primary-color-light dark:text-primary-color-dark">0{item.id}. </span>{" "}
-                <div className="group-hover:text-secondary-color-light duration-300">
+                <div className="group-hover:text-secondary-color-light dark:group-hover:text-secondary-color-dark duration-300">
                   {item.name}
                 </div>
               </NavLink>

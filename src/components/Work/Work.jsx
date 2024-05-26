@@ -16,10 +16,10 @@ const Work = () => {
     <div className="w-full flex flex-col gap-12 justify-start pt-12 pl-12 pb-20 dark:text-primary-color-dark text-primary-color-light">
       <div className="flex gap-2 items-center">
         <h1 className="text-2xl font-ubuntu font-normal">
-          <span className="text-secondary-color-light">03.</span> Some things
+          <span className="text-secondary-color-light dark:text-secondary-color-dark">03.</span> Some things
           I've built
         </h1>
-        <p className="w-80 h-[1px] bg-secondary-color-light opacity-80"></p>
+        <p className="w-80 h-[1px] bg-secondary-color-light dark:bg-secondary-color-dark opacity-80"></p>
       </div>
 
       <div className="flex flex-col w-full gap-12">
@@ -33,15 +33,15 @@ const Work = () => {
             className="z-10"
           />
           <div className="hidden h-72 md:block absolute left-[600px] rounded-md overflow-hidden">
-            <img src={preview1} alt="preview1" width={500} className="h-full" />
-            <div className="absolute inset-0 bg-secondary-color-light opacity-50 hover:opacity-0 transition-opacity duration-300"></div>
+            <img src={preview1} alt="preview1" width={500} className="h-full border border-secondary-color-light dark:border-secondary-color-dark rounded-md" />
+            <div className="absolute inset-0 bg-secondary-color-light dark:bg-secondary-color-dark opacity-50 hover:opacity-0 transition-opacity duration-300"></div>
           </div>
         </div>
 
         <div className="flex flex-wrap justify-end items-center">
           <div className="hidden h-72 md:block absolute right-[600px] rounded-md overflow-hidden">
-            <img src={preview2} alt="preview2" width={500} className="h-full" />
-            <div className="absolute inset-0 bg-secondary-color-light opacity-50 hover:opacity-0 transition-opacity duration-300"></div>
+            <img src={preview2} alt="preview2" width={500} className="h-full border border-secondary-color-light dark:border-secondary-color-dark rounded-md" />
+            <div className="absolute inset-0 bg-secondary-color-light dark:bg-secondary-color-dark opacity-50 hover:opacity-0 transition-opacity duration-300"></div>
           </div>
           <Project
             name="Frontify"
@@ -63,8 +63,8 @@ const Work = () => {
             className="z-10"
           />
           <div className="hidden h-72 md:block absolute left-[600px] rounded-md overflow-hidden">
-            <img src={preview3} alt="preview3" width={500} className="h-full" />
-            <div className="absolute inset-0 bg-secondary-color-light opacity-50 hover:opacity-0 transition-opacity duration-300 z-20"></div>
+            <img src={preview3} alt="preview3" width={500} className="h-full border border-secondary-color-light dark:border-secondary-color-dark rounded-md" />
+            <div className="absolute inset-0 bg-secondary-color-light dark:bg-secondary-color-dark opacity-50 hover:opacity-0 transition-opacity duration-300 z-20"></div>
           </div>
         </div>
       </div>

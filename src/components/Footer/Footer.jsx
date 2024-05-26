@@ -35,9 +35,9 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `text-primary-color-light dark:text-primary-color-dark transition dark:hover:text-secondary-color-light hover:text-secondary-color-light ${
+                `text-primary-color-light dark:text-primary-color-dark transition dark:hover:text-secondary-color-dark hover:text-secondary-color-dark ${
                   isActive
-                    ? "text-secondary-color-light dark:text-secondary-color-light underline"
+                    ? "text-secondary-color-light dark:text-secondary-color-dark underline"
                     : "text-primary-color-light dark:text-primary-color-dark"
                 }`
               }
@@ -50,7 +50,7 @@ const Footer = () => {
 
           <li>
             <Link
-              className="text-primary-color-light dark:text-primary-color-dark transition hover:text-secondary-color-light dark:hover:text-secondary-color-light"
+              className="text-primary-color-light dark:text-primary-color-dark transition hover:text-secondary-color-dark dark:hover:text-secondary-color-dark"
               to="/"
             >
               {" "}
@@ -71,9 +71,9 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `text-primary-color-light dark:text-primary-color-dark transition  dark:hover:text-secondary-color-light hover:text-secondary-color-light ${
+                `text-primary-color-light dark:text-primary-color-dark transition  dark:hover:text-secondary-color-dark hover:text-secondary-color-dark ${
                   isActive
-                    ? "text-secondary-color-light dark:text-secondary-color-light underline"
+                    ? "text-secondary-color-light dark:text-secondary-color-dark underline"
                     : "text-primary-color-light dark:text-primary-color-dark"
                 }`
               }
@@ -87,9 +87,9 @@ const Footer = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                `text-primary-color-light dark:text-primary-color-dark transition  dark:hover:text-secondary-color-light hover:text-secondary-color-light ${
+                `text-primary-color-light dark:text-primary-color-dark transition  dark:hover:text-secondary-color-dark hover:text-secondary-color-dark ${
                   isActive
-                    ? "text-secondary-color-light dark:text-secondary-color-light underline"
+                    ? "text-secondary-color-light dark:text-secondary-color-dark underline"
                     : "text-primary-color-light dark:text-primary-color-dark"
                 }`
               }
@@ -102,7 +102,7 @@ const Footer = () => {
 
           <li>
             <Link
-              className="text-primary-color-light dark:text-primary-color-dark transition hover:text-secondary-color-light dark:hover:text-secondary-color-light"
+              className="text-primary-color-light dark:text-primary-color-dark transition hover:text-secondary-color-light dark:hover:text-secondary-color-dark"
               to="404"
             >
               404{" "}
@@ -118,7 +118,7 @@ const Footer = () => {
               target="_blank"
               className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
-              <FaGithub className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
+              <FaGithub className="hover:-translate-y-1 duration-500 hover:text-secondary-color-dark" />
             </a>
           </li>
           <li>
@@ -128,7 +128,7 @@ const Footer = () => {
               target="_blank"
               className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
-              <FaLinkedin className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
+              <FaLinkedin className="hover:-translate-y-1 duration-500 hover:text-secondary-color-dark" />
             </a>
           </li>
           <li>
@@ -138,7 +138,7 @@ const Footer = () => {
               target="_blank"
               className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
-              <FaXTwitter className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
+              <FaXTwitter className="hover:-translate-y-1 duration-500 hover:text-secondary-color-dark" />
             </a>
           </li>
           <li>
@@ -148,7 +148,7 @@ const Footer = () => {
               target="_blank"
               className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
-              <FaInstagram className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
+              <FaInstagram className="hover:-translate-y-1 duration-500 hover:text-secondary-color-dark" />
             </a>
           </li>
           <li>
@@ -158,7 +158,7 @@ const Footer = () => {
               target="_blank"
               className="text-primary-color-light dark:text-primary-color-dark text-xl"
             >
-              <FaGitlab className="hover:-translate-y-1 duration-500 hover:text-secondary-color-light" />
+              <FaGitlab className="hover:-translate-y-1 duration-500 hover:text-secondary-color-dark" />
             </a>
           </li>
         </ul>

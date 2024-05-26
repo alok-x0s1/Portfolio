@@ -37,7 +37,7 @@ body {
 }
 
 .anchor-hover {
-  @apply border-b border-dotted border-secondary-color-light/40 text-secondary-color-light;
+  @apply border-b border-dotted border-secondary-color-light/40 text-secondary-color-light dark:text-secondary-color-dark dark:border-secondary-color-dark/40;
 }
 
 ::selection {

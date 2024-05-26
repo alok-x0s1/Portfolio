@@ -3,7 +3,7 @@ import { Container, About as AboutComponent } from '../components'
 
 const About = () => {
   return (
-    <div className='bg-primary-bg-light'>
+    <div className='bg-primary-bg-light dark:bg-primary-bg-dark'>
         <Container>
             <AboutComponent />
         </Container>

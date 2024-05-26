@@ -11,11 +11,11 @@ const Project = ({
 }) => {
   return (
     <div
-      className={`min-w-96 max-w-[620px] flex flex-col ${className} gap-4 mt-8 w-fit rounded-md border p-4 shadow-sm shadow-secondary-color-light hover:-translate-y-1 duration-500`}
+      className={`min-w-96 max-w-[620px] flex flex-col ${className} gap-4 mt-8 w-fit rounded-md border p-4 shadow-sm shadow-secondary-color-light dark:shadow-secondary-color-dark hover:-translate-y-1 duration-500`}
     >
-      <p className="text-secondary-color-light text-lg">Featured Project</p>
+      <p className="text-secondary-color-light dark:text-secondary-color-dark text-lg">Featured Project</p>
       <h2 className="font-infant text-4xl font-semibold">{name}</h2>
-      <p className="text-xl p-4 rounded-md font-ubuntu bg-secondary-color-light/90 text-primary-color-light dark:text-primary-color-dark shadow-md">
+      <p className="text-xl p-4 rounded-md font-ubuntu bg-secondary-color-light/90 dark:bg-secondary-color-dark/90 text-primary-color-light shadow-md">
         {content}
       </p>
       <div className="flex gap-2 flex-wrap mt-2">
@@ -30,12 +30,12 @@ const Project = ({
           ))}
       </div>
       <div className="flex justify-start items-center gap-6 mt-4">
-        <div className="cursor-pointer hover:text-secondary-color-light duration-500 text-3xl">
+        <div className="cursor-pointer hover:text-secondary-color-light dark:hover:text-secondary-color-dark duration-500 text-3xl">
           <a href={liveLink} target="_blank">
             <FaLink />
           </a>
         </div>
-        <div className="cursor-pointer hover:text-secondary-color-light duration-500 text-3xl">
+        <div className="cursor-pointer hover:text-secondary-color-light dark:hover:text-secondary-color-dark duration-500 text-3xl">
           <a href={githubLink} target="_blank">
             <FaGithub />
           </a>

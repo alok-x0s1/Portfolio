@@ -6,7 +6,7 @@ const Home = () => {
     <div className="bg-primary-bg-light text-primary-color-light dark:text-primary-color-dark dark:bg-primary-bg-dark">
       <Container>
         <div className="flex flex-col items-start pt-16 w-2/3 pl-8">
-          <p className="text-secondary-color-light text-3xl font-ubuntu">
+          <p className="text-secondary-color-light dark:text-secondary-color-dark text-3xl font-ubuntu">
             Hy, my name is
           </p>
           <h1 className="text-8xl max-[836px]:text-7xl font-ubuntu font-medium leading-snug">

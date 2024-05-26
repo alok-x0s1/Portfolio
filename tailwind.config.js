@@ -8,8 +8,9 @@ export default {
         "primary-bg-light": "#EDF4F2",
         "primary-color-light": "#040303",
         "secondary-color-light": "#E7473C",
-        "primary-bg-dark": "#161619",
+        "primary-bg-dark": "#0A192F",
         "primary-color-dark": "#F5F5F5",
+        "secondary-color-dark": "#64FFDA",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
