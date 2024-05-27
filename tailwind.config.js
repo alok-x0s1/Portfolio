@@ -18,6 +18,17 @@ export default {
         infant: ["Ysabeau Infant", "sans-serif"],
         inter: ["Inter", "sans-serif"],
       },
+      screens: {
+        xl: { max: "1200px" },
+
+        lg: { max: "930px" },
+
+        md: { max: "767px" },
+
+        sm: { max: "639px" },
+
+        xs: { max: "479px" },
+      },
     },
   },
   plugins: [],

@@ -11,12 +11,14 @@ body {
   --scrollbar-track: #f0f0f0;
   --scrollbar-thumb: #888;
   --scrollbar-thumb-hover: #555;
+  --selection-color: #e7473c;
 }
 
 .dark {
   --scrollbar-track: #161619;
   --scrollbar-thumb: #555;
   --scrollbar-thumb-hover: #777;
+  --selection-color: #64FFDA;
 }
 
 ::-webkit-scrollbar {
@@ -41,5 +43,6 @@ body {
 }
 
 ::selection {
-  background-color: #e7473c;
+  background-color: var(--selection-color);
+  color: black;
 }

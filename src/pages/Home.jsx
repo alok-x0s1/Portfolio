@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <div className="bg-primary-bg-light text-primary-color-light dark:text-primary-color-dark dark:bg-primary-bg-dark">
       <Container>
-        <div className="flex flex-col items-start pt-16 w-2/3 pl-8">
+        <div className="flex flex-col items-start pt-16 w-2/3 lg:w-full pl-8">
           <p className="text-secondary-color-light dark:text-secondary-color-dark text-3xl font-ubuntu">
             Hy, my name is
           </p>
-          <h1 className="text-8xl max-[836px]:text-7xl font-ubuntu font-medium leading-snug">
+          <h1 className="text-8xl font-ubuntu mt-3 font-medium leading-tight">
             Alok Yadav.
           </h1>
           {/* <h3 className="text-7xl font-medium font-ubuntu opacity-75 leading-tight tracking-tighter">Weaving Web with Code Mastery</h3> */}
