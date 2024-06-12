@@ -7,9 +7,9 @@ const AboutCard = () => {
         <h1 className="text-2xl font-ubuntu font-normal">
           <span className="text-secondary-color-light dark:text-secondary-color-dark">02.</span> About me
         </h1>
-        <p className="flex-grow h-[1px] bg-secondary-color-light dark:bg-secondary-color-dark opacity-80"></p>
+        <p className="w-80 md:w-40 h-[1px] bg-secondary-color-light dark:bg-secondary-color-dark opacity-80"></p>
       </div>
-      <p className="w-2/3 text-lg sm:w-full">
+      <p className="w-2/3 text-lg lg:w-full">
         Hello! I'm{" "}
         <span className="anchor-hover">
           Alok Yadav
@@ -24,7 +24,7 @@ const AboutCard = () => {
         heart effect you see here, using HTML, CSS, and JavaScript.
       </p>
 
-      <p className="w-2/3 text-lg mb-12 sm:w-full">
+      <p className="w-2/3 text-lg mb-12 lg:w-full">
         I'm pursuing my Bachelor's degree in Computer application from{" "}
         <span className="anchor-hover">
           VBS Purvanchal University

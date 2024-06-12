@@ -7,7 +7,6 @@ const GithubCalendar = () => {
       <h1 className="text-5xl font-medium font-ubuntu text-center">
         Days I <span className="text-secondary-color-light dark:text-secondary-color-dark">code</span>
       </h1>
-      <div className="w-full overflow-auto">
         <GitHubCalendar
           username="alok-x0s1"
           blockSize={14}
@@ -16,7 +15,6 @@ const GithubCalendar = () => {
           colorScheme="light"
           fontSize={16}
         />
-      </div>
     </div>
   );
 };
