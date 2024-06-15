@@ -19,7 +19,7 @@ const Work = () => {
           <span className="text-secondary-color-light dark:text-secondary-color-dark">03.</span> Some things
           I've built
         </h1>
-        <p className="w-80 lg:w-40 sm:w-20 xs:w-0 h-[1px] bg-secondary-color-light dark:bg-secondary-color-dark opacity-80"></p>
+        <p className="w-80 lg:w-40 md:w-20 sm:w-10 xs:w-0 h-[1px] bg-secondary-color-light dark:bg-secondary-color-dark opacity-80"></p>
       </div>
 
       <div className="flex flex-col w-full gap-12 md:gap-8">

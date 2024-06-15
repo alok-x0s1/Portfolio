@@ -32,7 +32,7 @@ const Contact = () => {
         <p className="w-80 lg:w-40 sm:w-20 h-[1px] bg-secondary-color-light dark:bg-secondary-color-dark opacity-80"></p>
       </div>
       <div className="flex w-full gap-4 justify-between flex-wrap">
-        <div className="flex w-[35%] lg:w-[75%] sm:w-full flex-col gap-4">
+        <div className="flex w-[35%] lg:w-[75%] md:w-full flex-col gap-4">
           {arr &&
             arr.map((elem) => (
               <div key={elem.id}>

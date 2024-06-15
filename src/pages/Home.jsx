@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="bg-primary-bg-light text-primary-color-light dark:text-primary-color-dark dark:bg-primary-bg-dark min-h-screen">
       <Container>
-        <div className="flex flex-col items-start pt-16 w-2/3 lg:w-full pl-8">
+        <div className="flex flex-col items-start pt-16 sm:pt-24 w-2/3 lg:w-full pl-8">
           <p className="text-secondary-color-light dark:text-secondary-color-dark text-3xl font-ubuntu sm:text-2xl xs:text-xl">
             Hy, my name is
           </p>
