@@ -11,7 +11,7 @@ const Contact = () => {
           I&apos;m interested in contributing to interesting projects and ideas.
         </p>
 
-        <a href="mailto:alok421yadav@gmail.com" className='text-2xl font-semibold'>
+        <a href="mailto:alok421yadav@gmail.com" className='text-2xl font-semibold text-secondaryTextColor'>
           <strong> Let&apos;s make magic with code 👋</strong>
         </a>
 
