@@ -79,13 +79,21 @@ const config = {
 					"50%": { borderRadius: "35% 0% 40% 0% / 37% 0% 46% 0%" },
 				},
 				grow: {
-					"0%": { width: "0", height: "0", transform: "scale(0)" },
+					"0%": {
+						width: "0",
+						height: "0",
+						transform: "scale(0) translate(-50%, -50%)",
+					},
 					"50%": {
 						width: "2.5rem",
 						height: "2.5rem",
-						transform: "scale(1.2)",
+						transform: "scale(1.1) translate(-50%, -50%)",
 					},
-					"100%": { transform: "scale(1)" },
+					"100%": {
+						width: "2.5rem",
+						height: "2.5rem",
+						transform: "scale(1) translate(-50%, -50%)",
+					},
 				},
 			},
 			animation: {
@@ -93,7 +101,7 @@ const config = {
 				"accordion-up": "accordion-up 0.2s ease-out",
 				scale: "scale 1.5s infinite",
 				"border-radius": "borderRadiusAnimation 8s infinite",
-				grow: "grow 0.3s ease-in-out forwards",
+				grow: "grow 0.5s ease-in-out forwards",
 			},
 		},
 	},

@@ -71,3 +71,7 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+::selection {
+  display: none;
+}
