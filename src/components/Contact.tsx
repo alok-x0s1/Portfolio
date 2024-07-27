@@ -1,17 +1,17 @@
 import React from 'react'
-import { kanit } from '@/data/fonts'
+import { orbitron } from '@/data/fonts'
 import Link from 'next/link'
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <footer className='flex flex-col p-8 gap-10 bg-gray-200/50 w-full text-center'>
-        <h5 className={`${kanit.className} text-4xl mt-4`}>Let&apos;s Connect 🤝</h5>
+    <footer className='flex mt-24 flex-col p-8 gap-10 bg-gray-200/50 w-full text-center'>
+        <h5 className={`${orbitron.className} text-4xl mt-4 font-semibold tracking-tight`}>Let&apos;s Connect 🤝</h5>
         <p className="text-lg tracking-wide leading-snug">
           I&apos;m interested in contributing to interesting projects and ideas.
         </p>
 
-        <a href="mailto:alok421yadav@gmail.com" className='text-2xl font-semibold text-secondaryTextColor'>
+        <a href="mailto:alok421yadav@gmail.com" className={`${orbitron.className} text-2xl font-semibold text-secondaryTextColor`}>
           <strong> Let&apos;s make magic with code 👋</strong>
         </a>
 
