@@ -12,7 +12,7 @@ const About = () => {
 
 			<p>Hey there!👋</p>
 			<p>
-				I&apos;m Atijosan Iyanuoluwa, and I&apos;m on a mission to craft
+				I&apos;m Alok  Yadav, and I&apos;m on a mission to craft
 				top-notch, modern web applications that not only scale
 				effortlessly but also make a tangible difference in
 				people&apos;s lives. My journey as a frontend developer has been
