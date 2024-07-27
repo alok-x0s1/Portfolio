@@ -1,10 +1,12 @@
-import { ptSerif } from "@/data/fonts";
+import { baskervville, orbitron } from "@/data/fonts";
 import React from "react";
 
 const About = () => {
 	return (
 		<div className="px-16 py-4 w-full flex flex-col gap-3 text-start text-primaryTextColor/95 mt-24 text-lg tracking-wide leading-snug">
-			<h2 className={`${ptSerif.className} text-3xl font-semibold mb-4`}>
+			<h2
+				className={`${orbitron.className} text-3xl font-semibold mb-4`}
+			>
 				About Me
 			</h2>
 

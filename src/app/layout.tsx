@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${rubik.className}`}>
+			<body className={`${rubik.className} bg-gray-200/50`}>
 				<div className="w-full flex items-center shadow-sm shadow-secondaryTextColor justify-center">
 					<Navbar />
 				</div>

@@ -1,26 +1,54 @@
 "use client";
 
-import { ptSerif } from "@/data/fonts";
+import { kanit, baskervville, orbitron } from "@/data/fonts";
 import Link from "next/link";
 import React from "react";
 import Typewriter from "typewriter-effect";
+import profilePic from "../../public/profile.jpeg";
+import Image from "next/image";
+import {
+	FaFacebook,
+	FaGithub,
+	FaInstagram,
+	FaLinkedin,
+	FaTwitter,
+} from "react-icons/fa";
 
 const HeroSection = () => {
 	return (
-		<div className="w-[60rem] flex flex-col gap-6 mt-32 text-center px-8 text-primaryTextColor">
-			<h1 className={`${ptSerif.className} text-5xl font-bold tracking-tighter`}>
-				<Typewriter
-					options={{
-						strings: [
-							'  Hey there, I&apos;m Alok <span class="text-secondaryTextColor">Yadav</span>.',
-						],
-						autoStart: true,
-						loop: true,
-					}}
-				/>
-			</h1>
+		<div className="w-[60rem] flex flex-col gap-6 mt-24 px-8 text-primaryTextColor">
+			<div className="flex items-start gap-8">
+				<div className="h-48 w-48 overflow-hidden object-fill animate-border-radius">
+					<Image
+						src={profilePic}
+						alt="ProfilePic"
+						className="h-48 w-48"
+					/>
+				</div>
+				<div className="flex-col flex gap-6 w-fit items-start justify-start">
+					<div className="text-start">
+						<h1
+							className={`${orbitron.className} text-5xl mt-6 font-semibold tracking-tighter`}
+						>
+							AlokYadav
+						</h1>
+						<p
+							className={`${orbitron.className} text-xl p-2 bg-gray-200/50 rounded-sm mt-1 tracking-wide leading-tight`}
+						>
+							Javascript Developer.
+						</p>
+					</div>
+					<div className="social-links flex gap-6 justify-center items-center text-2xl cursor-pointer">
+						<FaGithub />
+						<FaLinkedin />
+						<FaTwitter />
+						<FaInstagram />
+						<FaFacebook />
+					</div>
+				</div>
+			</div>
 
-			<p className="intro-text text-lg tracking-wide leading-relaxed">
+			<p className="intro-text text-lg tracking-wide mt-4 leading-relaxed  text-center">
 				I am a{" "}
 				<span className="text-secondaryTextColor">
 					<strong>Frontend Developer</strong>
@@ -33,13 +61,13 @@ const HeroSection = () => {
 				not only functional but also look great.
 			</p>
 
-			<p className="animate-scale">
-              LEARN MORE ABOUT
-              <Link href="/about">
-                <span className="text-secondaryTextColor"> ME </span>
-              </Link>
-              !
-            </p>
+			<p className="animate-scale  text-center">
+				LEARN MORE ABOUT
+				<Link href="/about">
+					<span className="text-secondaryTextColor"> ME </span>
+				</Link>
+				!
+			</p>
 		</div>
 	);
 };
