@@ -1,20 +1,10 @@
 import { orbitron } from "@/data/fonts";
 import React from "react";
 import { CgCPlusPlus } from "react-icons/cg";
-import { DiGit, DiJavascript1, DiReact } from "react-icons/di";
-import { FaGithub, FaNode, FaWindows } from "react-icons/fa";
-import { FiGitlab } from "react-icons/fi";
+import { DiJavascript1, DiReact } from "react-icons/di";
+import { FaNode } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import {
-	SiAppwrite,
-	SiExpress,
-	SiMongodb,
-	SiMongoose,
-	SiNetlify,
-	SiPostman,
-	SiVercel,
-	SiVisualstudiocode,
-} from "react-icons/si";
+import { SiAppwrite, SiExpress, SiMongodb, SiMongoose } from "react-icons/si";
 
 const TechStacks = () => {
 	const logos = [
@@ -29,16 +19,6 @@ const TechStacks = () => {
 		{ icon: <SiAppwrite />, name: "Appwrite" },
 	];
 
-	const tools = [
-		{ name: "Visual Studio Code", icon: <SiVisualstudiocode /> },
-		{ name: "Postman", icon: <SiPostman /> },
-		{ name: "Git", icon: <DiGit /> },
-		{ name: "Netlify", icon: <SiNetlify /> },
-		{ name: "Github", icon: <FaGithub /> },
-		{ name: "Gitlab", icon: <FiGitlab /> },
-		{ name: "Vercel", icon: <SiVercel /> },
-		{ name: "Windows", icon: <FaWindows /> },
-	];
 	return (
 		<div className="px-16 flex flex-col text-primaryTextColor/95 mt-12 text-lg tracking-wide leading-snug w-full">
 			<h2 className={`${orbitron.className} text-3xl font-semibold mb-4`}>
