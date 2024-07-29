@@ -17,19 +17,19 @@ const Project: React.FC<ProjectProps> = ({
 	liveLink,
 }) => {
 	return (
-		<div className="w-[550px] border border-gray-300 rounded-sm p-4 flex flex-col gap-2 tracking-wide leading-snug shadow-sm">
-			<div className="flex flex-wrap gap-4 mb-1">
+		<div className="w-full border border-gray-300 rounded-sm p-4 flex flex-col gap-2 tracking-wide leading-snug shadow-sm">
+			<div className="flex flex-wrap gap-2 mb-2">
 				{stacks.map((stack, index) => (
 					<span
 						key={index}
-						className="text-secondaryTextColor text-base uppercase tracking-wide"
+						className="text-secondaryTextColor text-sm md:text-base uppercase tracking-wide"
 					>
 						{stack}
 					</span>
 				))}
 			</div>
-			<h2 className="text-lg font-medium">{title}</h2>
-			<p className="text-base sm:text-lg mb-4 text-primaryTextColor/75">
+			<h2 className="text-base md:text-lg font-medium">{title}</h2>
+			<p className="text-sm md:text-base mb-4 text-primaryTextColor/75">
 				{description}
 			</p>
 			<div className="flex gap-3 justify-start items-center">
@@ -37,7 +37,7 @@ const Project: React.FC<ProjectProps> = ({
 					href={githubLink}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-xl"
+					className="text-lg md:text-xl"
 				>
 					<FaGithub />
 				</a>
@@ -45,7 +45,7 @@ const Project: React.FC<ProjectProps> = ({
 					href={liveLink}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-lg"
+					className="text-lg md:text-xl"
 				>
 					<FaExternalLinkAlt />
 				</a>
