@@ -20,8 +20,10 @@ const TechStacks = () => {
 	];
 
 	return (
-		<div className="px-16 flex flex-col text-primaryTextColor/95 mt-12 text-lg tracking-wide leading-snug w-full">
-			<h2 className={`${orbitron.className} text-3xl font-semibold mb-4`}>
+		<div className="px-4 sm:px-8 md:px-16 flex flex-col text-primaryTextColor/95 mt-12 text-lg tracking-wide leading-snug w-full">
+			<h2
+				className={`${orbitron.className} text-3xl font-semibold mb-4 text-center sm:text-left`}
+			>
 				Professional{" "}
 				<span className="text-secondaryTextColor">skillset</span>
 			</h2>
@@ -30,12 +32,12 @@ const TechStacks = () => {
 				{logos.map((logo) => (
 					<div
 						key={logo.name}
-						className="p-6 sm:p-4 xs:p-3 rounded-sm cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col gap-3 items-center min-w-40 bg-gray-200/50 group hover:border-secondaryTextColor duration-500"
+						className="p-3 sm:p-4 md:p-6 rounded-sm cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col items-center w-24 sm:w-32 md:w-40 lg:min-w-40 bg-gray-200/50 group hover:border-secondaryTextColor duration-500"
 					>
-						<div className="text-8xl sm:text-6xl xs:text-5xl">
+						<div className="text-4xl sm:text-6xl md:text-8xl">
 							{logo.icon}
 						</div>
-						<div className="text-base group-hover:text-secondaryTextColor duration-300">
+						<div className="text-xs sm:text-base group-hover:text-secondaryTextColor duration-300">
 							{logo.name}
 						</div>
 					</div>

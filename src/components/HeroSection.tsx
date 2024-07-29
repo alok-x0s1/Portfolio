@@ -47,7 +47,7 @@ const HeroSection = () => {
 				</div>
 			</div>
 
-			<p className="intro-text text-base sm:text-lg tracking-wide mt-4 leading-relaxed text-center sm:text-left">
+			<p className="intro-text text-base sm:text-lg tracking-wide mt-4 leading-relaxed text-start md:text-center sm:text-left">
 				I am a{" "}
 				<span className="text-secondaryTextColor">
 					<strong>Frontend Developer</strong>
