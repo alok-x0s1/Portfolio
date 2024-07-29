@@ -36,7 +36,7 @@ const Navbar = () => {
 						key={id}
 						className="nav-links px-2 mx-2 hover:text-secondaryTextColor duration-200 text-lg cursor-pointer capitalize"
 					>
-						<Link href={link == "projects" ? "#projects" : link}>{link}</Link>
+						<Link href={link}>{link}</Link>
 					</li>
 				))}
 				<li className="nav-links px-4 mx-2 py-2 font-medium hover:text-secondaryTextColor duration-200 bg-gray-200/50 rounded-sm text-lg cursor-pointer">
