@@ -1,26 +1,58 @@
 import Project from "@/components/Project";
+import { orbitron } from "@/data/fonts";
 import React from "react";
 
 const Page: React.FC = () => {
-	const projectData = {
-		stacks: ["React", "TypeScript", "Tailwind CSS"],
-		title: "My Awesome Project",
-		description: "This is a description of my awesome project. This is a description of my awesome project. This is a description of my awesome project.",
-		githubLink: "https://github.com/yourusername/yourproject",
-		liveLink: "https://yourproject.live",
-	};
+	const projects = [
+		{
+			stacks: ["Next.js", "TypeScript", "Tailwind CSS"],
+			title: "Harmony Hub",
+			description:
+				"Harmony Hub is a cutting-edge music academy app built with Next.js. It transforms music education by providing an intuitive platform for students, teachers, and administrators. With features for interactive lessons, performance tracking, and streamlined administration, Harmony Hub enhances the learning experience and simplifies school management.(Aesa kuchh nhi h)",
+			githubLink: "https://github.com/alok-x0s1/Harmony-Hub",
+			liveLink: "https://harmony-hub-alok.vercel.app/",
+		},
+		{
+			stacks: ["Html", "CSS", "Javascript"],
+			title: "Quote Generator",
+			description:
+				"Random Quote Generator website! Powered by JavaScript, it offers a range of features to keep you inspired. With just a click, you can copy quotes to your clipboard, listen to them read aloud, or share them on Twitter. The 'Inspire Me' button lets you generate a new quote whenever you need a boost, and quotes automatically refresh every 15 seconds to ensure a steady flow of inspiration.",
+			githubLink: "https://github.com/alok-x0s1/Quote-Generator",
+			liveLink: "https://quote-generator-alok.vercel.app/",
+		},
+		{
+			stacks: ["Html", "CSS", "Javascript"],
+			title: "QrSwift",
+			description:
+				"This project lets you create QR codes using a web page. You enter some text or a URL, and the QR code is generated instantly. The project uses HTML for the structure of the page, CSS for styling it, and JavaScript to handle the QR code creation. It's a handy tool for quickly converting any information into a scannable QR code.",
+			githubLink: "https://github.com/alok-x0s1/QrSwift",
+			liveLink: "https://qrswift.vercel.app/",
+		},
+		{
+			stacks: ["React.js", "Javascript", "Tailwind CSS"],
+			title: "Currency Convertor",
+			description:
+				"Discover a sleek currency converter powered by Vite, boasting custom hooks for streamlined functionality. With an extensive array of currency options and real-time updates, it ensures accurate conversions on any device. Simplify international transactions with ease.",
+			githubLink: "https://github.com/alok-x0s1/Currency-Convertor",
+			liveLink: "https://currency-convertor-alok.vercel.app/",
+		},
+	];
 
 	return (
 		<main className="min-h-screen">
-			<section className="w-full">
-				<Project
-					stacks={projectData.stacks}
-					title={projectData.title}
-					description={projectData.description}
-					githubLink={projectData.githubLink}
-					liveLink={projectData.liveLink}
-				/>
-			</section>
+			<div className="mt-12 px-4 sm:px-8 lg:px-16 xl:px-32 mb-12">
+				<h2
+					className={`${orbitron.className} text-2xl sm:text-3xl font-semibold mb-8`}
+				>
+					Projects, I created
+				</h2>
+
+				<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-12">
+					{projects.map((project, index) => (
+						<Project key={index} {...project} />
+					))}
+				</div>
+			</div>
 		</main>
 	);
 };
