@@ -55,7 +55,7 @@ const Navbar = () => {
             <Link href={link}>{link}</Link>
           </li>
         ))}
-        <li className="nav-links px-4 mx-2 py-2 font-medium hover:text-secondaryTextColor duration-200 bg-gray-200/50 rounded-sm text-lg cursor-pointer">
+        <li className="nav-links px-4 mx-2 py-2 font-medium hover:bg-gray-200 duration-300 border-2 border-secondaryTextColor bg-secondaryTextColor rounded-sm text-lg cursor-pointer">
           <Link href="/projects">Resume</Link>
         </li>
       </ul>
