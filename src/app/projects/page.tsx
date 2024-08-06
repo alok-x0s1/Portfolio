@@ -40,7 +40,7 @@ const Page: React.FC = () => {
 
 	return (
 		<main className="min-h-screen">
-			<div className="mt-12 px-4 sm:px-8 lg:px-16 xl:px-32 mb-12">
+			<div className="pt-32 px-4 sm:px-8 lg:px-16 xl:px-32 mb-12">
 				<h2
 					className={`${orbitron.className} text-2xl sm:text-3xl font-semibold mb-8`}
 				>
