@@ -74,7 +74,7 @@ const Navbar = () => {
       <div
         className={`fixed md:hidden top-20 right-0 h-fit p-8 w-1/2 sm:w-1/3 transform backdrop-blur-md bg-gray-200 bg-opacity-500 ${
           nav ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        } transition-transform duration-300 ease-in-out origin-top-right rounded-md shadow-lg`}
+        } transition-all duration-500 ease-in-out origin-top-right rounded-md shadow-lg`}
       >
         <ul className="flex flex-col items-center w-full">
           <li

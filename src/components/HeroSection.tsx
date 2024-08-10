@@ -15,7 +15,7 @@ import {
 
 const HeroSection = () => {
 	return (
-		<div className="max-w-5xl mx-auto flex flex-col gap-6 mt-24 px-4 sm:px-8 text-primaryTextColor">
+		<div className="max-w-5xl mx-auto flex flex-col gap-6 mt-40 px-4 sm:px-8 text-primaryTextColor">
 			<div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
 				<div className="h-40 w-40 sm:h-48 sm:w-48 overflow-hidden object-fill animate-border-radius">
 					<Image
@@ -38,11 +38,27 @@ const HeroSection = () => {
 						</p>
 					</div>
 					<div className="social-links flex flex-wrap gap-4 justify-center sm:justify-start items-center text-2xl cursor-pointer">
-						<FaGithub />
-						<FaLinkedin />
-						<FaTwitter />
-						<FaInstagram />
-						<FaFacebook />
+						<a
+							href="https://github.com"
+							target="_blank"
+						>
+							<FaGithub />
+						</a>
+						<a href="https://www.linkedin.com" target="_blank">
+							<FaLinkedin />
+						</a>
+						<a href="https://x.com" target="_blank">
+							<FaTwitter />
+						</a>
+						<a
+							href="https://www.instagram.com/mr_x0s1"
+							target="_blank"
+						>
+							<FaInstagram />
+						</a>
+						<a href="https://www.facebook.com" target="_blank">
+							<FaFacebook />
+						</a>
 					</div>
 				</div>
 			</div>
@@ -50,14 +66,13 @@ const HeroSection = () => {
 			<p className="intro-text text-base sm:text-lg tracking-wide mt-4 leading-relaxed text-start md:text-center sm:text-left">
 				I am a{" "}
 				<span className="text-secondaryTextColor">
-					<strong>Frontend Developer</strong>
+					<strong>Full Stack Developer</strong>
 				</span>{" "}
-				who is passionate about crafting beautiful and functional
-				digital experiences. With a keen eye for design and a knack for
-				code, I specialize in bringing ideas to life through engaging
-				user interfaces and seamless interactions. By using the newest
-				and and most powerful tools, I design and build websites that
-				are not only functional but also look great.
+				who loves creating beautiful and functional digital experiences.
+				I have a good eye for design and enjoy coding. I specialize in
+				turning ideas into engaging websites with smooth interactions.
+				Using the latest tools, I build websites that work well and look
+				great.
 			</p>
 
 			<p className="animate-scale text-center">
