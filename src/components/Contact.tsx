@@ -15,7 +15,7 @@ const Contact = () => {
 			<h5
 				className={`${orbitron.className} text-2xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 font-semibold tracking-tight`}
 			>
-				Let's Collaborate 🤝
+				Let&apos;s Collaborate 🤝
 			</h5>
 			<p className="text-base sm:text-lg lg:text-xl tracking-wide leading-snug">
 				I&apos;m eager to engage in exciting projects and innovative
