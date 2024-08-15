@@ -3,6 +3,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { rubik } from "@/data/fonts";
+import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
 	title: "Alok - Javascript Developer",
@@ -17,10 +18,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${rubik.className} bg-gray-200/50`}>
-				<div className="">
-					<Navbar />
-				</div>
+				<Navbar />
 				{children}
+				<Contact />
 			</body>
 		</html>
 	);

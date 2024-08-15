@@ -7,32 +7,30 @@ const About = () => {
 			<h2
 				className={`${orbitron.className} text-2xl sm:text-3xl font-semibold mb-4`}
 			>
-				About Me
+				About <span className="text-secondaryTextColor">me</span>
 			</h2>
 
-			<p className="text-base sm:text-lg">Hey there!👋</p>
+			<p className="text-base sm:text-lg">Hello there!👋</p>
 			<p className="text-base sm:text-lg">
-				I&apos;m Alok Yadav, and I&apos;m on a mission to craft
-				top-notch, modern web applications that not only scale
-				effortlessly but also make a tangible difference in
-				people&apos;s lives. My journey as a frontend developer has been
-				a self-taught adventure fueled by an unyielding passion for
-				technology.
+				I&apos;m Alok Yadav, and my goal is to create exceptional,
+				innovative web experiences that not only perform seamlessly but
+				also leave a lasting impact. My journey as a developer has been
+				a rewarding self-taught adventure driven by a deep-seated
+				passion for technology.
 			</p>
 
 			<p className="text-base sm:text-lg">
-				What sets me apart is my commitment to continuous growth.
-				Whether it&apos;s through devouring online courses, seeking
-				guidance from mentors, or staying at the forefront of emerging
-				tools and trends, I&apos;m always hungry for knowledge.
+				What distinguishes me is my dedication to ongoing learning.
+				Whether it&apos;s through exploring online tutorials, consulting
+				with mentors, or staying updated with the latest technologies,
+				I&apos;m constantly seeking to expand my knowledge.
 			</p>
 
 			<p className="text-base sm:text-lg">
-				But life isn&apos;t just about code! When I&apos;m not immersed
-				in programming, you&apos;ll likely find me unwinding with a
-				sitcom on Netflix, penning down my thoughts in an article, or
-				engaging in epic battles in video games. I&apos;m also a
-				pianist, finding solace and joy in the harmonies of music.
+				But life isn&apos;t just about tech! When I&apos;m not coding,
+				you might find me relaxing with a good book, writing blog posts,
+				or diving into exciting video games. I also enjoy playing the
+				guitar, finding joy and relaxation in music.
 			</p>
 		</div>
 	);
