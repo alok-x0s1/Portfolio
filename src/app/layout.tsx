@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import { rubik } from "@/data/fonts";
 import Contact from "@/components/Contact";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
 	title: "Alok - Javascript Developer",
@@ -17,10 +18,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${rubik.className} bg-gray-200/50`}>
-				<Navbar />
-				{children}
-				<Contact />
+			<body className={`${rubik.className}`}>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<Navbar />
+					{children}
+					<Contact />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

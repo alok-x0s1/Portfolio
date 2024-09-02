@@ -15,9 +15,9 @@ import {
 
 const HeroSection = () => {
 	return (
-		<div className="max-w-5xl mx-auto flex flex-col gap-6 mt-40 px-4 sm:px-8 text-primaryTextColor">
+		<div className="max-w-5xl mx-auto flex flex-col gap-6 mt-40 px-4 sm:px-8 ">
 			<div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-				<div className="h-40 w-40 sm:h-48 sm:w-48 overflow-hidden object-fill animate-border-radius">
+				<div className="h-40 w-40 sm:h-48 sm:w-48 overflow-hidden object-fill rounded shadow-lg">
 					<Image
 						src={profilePic}
 						alt="ProfilePic"
@@ -32,16 +32,13 @@ const HeroSection = () => {
 							Alok Yadav
 						</h1>
 						<p
-							className={`${orbitron.className} text-lg sm:text-xl p-2 bg-gray-200/50 rounded-sm mt-1 tracking-wide leading-tight`}
+							className={`${orbitron.className} text-lg sm:text-xl p-2 rounded-sm tracking-wide leading-tight border border-input mt-4`}
 						>
 							Javascript Developer.
 						</p>
 					</div>
 					<div className="social-links flex flex-wrap gap-4 justify-center sm:justify-start items-center text-2xl cursor-pointer">
-						<a
-							href="https://github.com"
-							target="_blank"
-						>
+						<a href="https://github.com" target="_blank">
 							<FaGithub />
 						</a>
 						<a href="https://www.linkedin.com" target="_blank">

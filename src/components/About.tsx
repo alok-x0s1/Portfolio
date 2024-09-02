@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
 	return (
-		<div className="px-4 sm:px-8 lg:px-16 py-4 w-full flex flex-col gap-4 text-start text-primaryTextColor/95 mt-12 sm:mt-24 text-base sm:text-lg tracking-wide leading-snug">
+		<div className="px-4 sm:px-8 lg:px-16 py-4 w-full flex flex-col gap-4 text-start /95 mt-12 sm:mt-24 text-base sm:text-lg tracking-wide leading-snug">
 			<h2
 				className={`${orbitron.className} text-2xl sm:text-3xl font-semibold mb-4`}
 			>

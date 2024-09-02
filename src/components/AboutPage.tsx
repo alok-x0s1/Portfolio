@@ -9,7 +9,7 @@ import Tools from "./Tools";
 
 const AboutPage = () => {
 	return (
-		<div className="flex flex-col w-full gap-6 mt-12 sm:mt-32 text-center text-primaryTextColor">
+		<div className="flex flex-col w-full gap-6 mt-12 sm:mt-32 text-center ">
 			<h1
 				className={`${orbitron.className} text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight px-4 sm:px-8`}
 			>

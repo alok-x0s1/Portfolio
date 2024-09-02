@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({
 	liveLink,
 }) => {
 	return (
-		<div className="w-full border border-gray-300 rounded-sm p-4 flex flex-col gap-2 tracking-wide leading-snug shadow-sm">
+		<div className="w-full border border-gray-300 rounded p-4 flex flex-col gap-2 tracking-wide leading-snug shadow-md">
 			<div className="flex flex-wrap gap-2 mb-2">
 				{stacks.map((stack, index) => (
 					<span
@@ -29,10 +29,8 @@ const Project: React.FC<ProjectProps> = ({
 				))}
 			</div>
 			<h2 className="text-base md:text-lg font-medium">{title}</h2>
-			<p className="text-sm md:text-base mb-4 text-primaryTextColor/75">
-				{description}
-			</p>
-			<div className="flex gap-3 justify-start items-center">
+			<p className="text-sm md:text-base mb-4">{description}</p>
+			<div className="flex gap-5 justify-start items-center">
 				<a
 					href={githubLink}
 					target="_blank"

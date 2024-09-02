@@ -15,15 +15,17 @@ const Tools = () => {
 		{ name: "VsCode", icon: <SiVisualstudiocode /> },
 		{ name: "Postman", icon: <SiPostman /> },
 		{ name: "Git", icon: <DiGit /> },
-		{ name: "Netlify", icon: <SiNetlify /> },
 		{ name: "Github", icon: <FaGithub /> },
 		{ name: "Gitlab", icon: <FiGitlab /> },
 		{ name: "Vercel", icon: <SiVercel /> },
+		{ name: "Netlify", icon: <SiNetlify /> },
 		{ name: "Windows", icon: <FaWindows /> },
 	];
 	return (
-		<div className="px-4 sm:px-8 md:px-16 flex flex-col text-primaryTextColor/95 mt-12 text-lg tracking-wide leading-snug w-full">
-			<h2 className={`${orbitron.className} text-3xl font-semibold mb-4 text-center sm:text-left`}>
+		<div className="px-4 sm:px-8 md:px-16 flex flex-col /95 mt-12 text-lg tracking-wide leading-snug w-full">
+			<h2
+				className={`${orbitron.className} text-3xl font-semibold mb-4 text-center sm:text-left`}
+			>
 				Tools <span className="text-secondaryTextColor">I use</span>
 			</h2>
 
@@ -31,7 +33,7 @@ const Tools = () => {
 				{tools.map((tool) => (
 					<div
 						key={tool.name}
-						className="p-3 sm:p-4 md:p-6 rounded-sm cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col gap-1 items-center w-24 sm:w-32 md:w-40 lg:min-w-40 h-fit bg-gray-200/50 group hover:border-secondaryTextColor duration-500"
+						className="p-3 sm:p-4 md:p-6 rounded-sm cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col gap-1 items-center w-24 sm:w-32 md:w-40 lg:min-w-40 h-fit group hover:border-secondaryTextColor duration-500"
 					>
 						<div className="text-4xl sm:text-6xl md:text-7xl">
 							{tool.icon}
