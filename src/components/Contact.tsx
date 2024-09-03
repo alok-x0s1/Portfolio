@@ -11,7 +11,7 @@ import {
 
 const Contact = () => {
 	return (
-		<footer className="flex flex-col p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8 lg:gap-10 w-full text-center">
+		<footer className="flex flex-col p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8 lg:gap-10 w-full text-center border-t border-input">
 			<h5
 				className={`${orbitron.className} text-2xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 font-semibold tracking-tight`}
 			>

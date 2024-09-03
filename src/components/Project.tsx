@@ -17,7 +17,7 @@ const Project: React.FC<ProjectProps> = ({
 	liveLink,
 }) => {
 	return (
-		<div className="w-full border border-gray-300 rounded p-4 flex flex-col gap-2 tracking-wide leading-snug shadow-md">
+		<div className="w-full border border-input rounded p-4 flex flex-col gap-2 tracking-wide leading-snug shadow-sm shadow-input">
 			<div className="flex flex-wrap gap-2 mb-2">
 				{stacks.map((stack, index) => (
 					<span

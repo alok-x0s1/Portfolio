@@ -33,7 +33,7 @@ const Tools = () => {
 				{tools.map((tool) => (
 					<div
 						key={tool.name}
-						className="p-3 sm:p-4 md:p-6 rounded-sm cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col gap-1 items-center w-24 sm:w-32 md:w-40 lg:min-w-40 h-fit group hover:border-secondaryTextColor duration-500"
+						className="p-3 sm:p-4 md:p-6 rounded cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col gap-1 items-center w-24 sm:w-32 md:w-40 lg:min-w-40 h-fit group hover:border-secondaryTextColor duration-500"
 					>
 						<div className="text-4xl sm:text-6xl md:text-7xl">
 							{tool.icon}

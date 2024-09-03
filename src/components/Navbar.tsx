@@ -35,7 +35,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className="fixed top-4 left-4 right-4 max-w-6xl mx-auto backdrop-blur-md rounded-md shadow-lg flex justify-between items-center px-6 py-3 z-50 border border-input">
+		<div className="fixed top-4 left-4 right-4 max-w-6xl mx-auto backdrop-blur-md rounded-md shadow-sm flex justify-between items-center px-6 py-3 z-50 border border-input shadow-input">
 			{/* Logo Section */}
 			<div>
 				<h1
@@ -58,7 +58,7 @@ const Navbar = () => {
 					</li>
 				))}
 				<li>
-					<Button variant="outline">
+					<Button variant="outline" className="shadow-sm shadow-input">
 						<Link
 							href="/projects"
 							className="text-lg px-2 hover:text-secondaryTextColor"

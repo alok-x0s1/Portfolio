@@ -19,7 +19,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
 export function ThemeToggle() {
 	const { setTheme } = useTheme();
 	return (
-		<div>
+		<div className="shadow-sm shadow-input">
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Button variant="outline" size="icon" className="hover:text-secondaryTextColor">
