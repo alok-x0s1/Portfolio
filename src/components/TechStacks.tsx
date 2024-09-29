@@ -1,3 +1,5 @@
+"use client";
+
 import { orbitron } from "@/data/fonts";
 import React from "react";
 import { CgCPlusPlus } from "react-icons/cg";
@@ -11,6 +13,14 @@ import {
 	SiMongoose,
 	SiFirebase,
 } from "react-icons/si";
+import { motion } from "framer-motion";
+
+// Animation Variants
+const iconVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+	hover: { scale: 1.1, rotate: 3, transition: { duration: 0.2 } },
+};
 
 const TechStacks = () => {
 	const logos = [
@@ -37,9 +47,13 @@ const TechStacks = () => {
 
 			<div className="flex flex-wrap justify-center items-center gap-8 mt-12">
 				{logos.map((logo) => (
-					<div
+					<motion.div
 						key={logo.name}
-						className="p-3 sm:p-4 md:p-6 rounded cursor-pointer border-2 hover:-translate-y-2 shadow-md flex flex-col items-center w-24 sm:w-32 md:w-40 lg:min-w-40 group hover:border-secondaryTextColor duration-500"
+						className="p-3 sm:p-4 md:p-6 rounded cursor-pointer border-2 shadow-md flex flex-col items-center w-24 sm:w-32 md:w-40 lg:min-w-40 group duration-500 hover:border-secondaryTextColor dark:border-border border-transparent"
+						variants={iconVariants}
+						initial="hidden"
+						whileInView="visible"
+						whileHover="hover"
 					>
 						<div className="text-4xl sm:text-6xl md:text-7xl">
 							{logo.icon}
@@ -47,7 +61,7 @@ const TechStacks = () => {
 						<div className="text-xs sm:text-base group-hover:text-secondaryTextColor duration-300">
 							{logo.name}
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</div>
 		</div>

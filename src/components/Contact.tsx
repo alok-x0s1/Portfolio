@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { orbitron } from "@/data/fonts";
 import Link from "next/link";
@@ -8,10 +10,30 @@ import {
 	FaInstagram,
 	FaFacebook,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+// Animation Variants for the footer
+const footerVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+// Animation Variants for the social links
+const socialLinkVariants = {
+	hover: {
+		y: -5, // Move up slightly on hover
+		transition: { duration: 0.3 },
+	},
+};
 
 const Contact = () => {
 	return (
-		<footer className="flex flex-col p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8 lg:gap-10 w-full text-center border-t border-input">
+		<motion.footer
+			className="flex flex-col p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8 lg:gap-10 w-full text-center border-t border-input"
+			variants={footerVariants}
+			initial="hidden"
+			whileInView="visible"
+		>
 			<h5
 				className={`${orbitron.className} text-2xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 font-semibold tracking-tight`}
 			>
@@ -33,40 +55,40 @@ const Contact = () => {
 			</a>
 
 			<div className="links flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-base sm:text-lg">
-				<Link
-					href="/"
-					className="hover:text-secondaryTextColor duration-300"
-				>
-					Home
-				</Link>
-				<Link
-					href="/about"
-					className="hover:text-secondaryTextColor duration-300"
-				>
-					About
-				</Link>
-				<Link
-					href="/projects"
-					className="hover:text-secondaryTextColor duration-300"
-				>
-					Projects
-				</Link>
-				<Link
-					href="/hello-world"
-					className="hover:text-secondaryTextColor duration-300"
-				>
-					404
-				</Link>
+				{["/", "/about", "/projects", "/hello-world"].map(
+					(href, index) => (
+						<Link
+							key={index}
+							href={href}
+							className="hover:text-secondaryTextColor duration-300"
+						>
+							{href === "/"
+								? "Home"
+								: href.slice(1).charAt(0).toUpperCase() +
+								  href.slice(2)}
+						</Link>
+					)
+				)}
 			</div>
 
 			<div className="social-links flex gap-4 sm:gap-6 lg:gap-8 justify-center items-center text-2xl sm:text-3xl">
-				<FaGithub />
-				<FaLinkedin />
-				<FaTwitter />
-				<FaInstagram />
-				<FaFacebook />
+				{[
+					<FaGithub />,
+					<FaLinkedin />,
+					<FaTwitter />,
+					<FaInstagram />,
+					<FaFacebook />,
+				].map((icon, index) => (
+					<motion.div
+						key={index}
+						variants={socialLinkVariants}
+						whileHover="hover"
+					>
+						{icon}
+					</motion.div>
+				))}
 			</div>
-		</footer>
+		</motion.footer>
 	);
 };
 

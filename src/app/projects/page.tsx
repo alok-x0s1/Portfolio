@@ -1,6 +1,24 @@
+"use client";
+
 import Project from "@/components/Project";
 import { orbitron } from "@/data/fonts";
 import React from "react";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+};
+
+const projectVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
 
 const Page: React.FC = () => {
 	const projects = [
@@ -8,7 +26,7 @@ const Page: React.FC = () => {
 			stacks: ["Next.js", "TypeScript", "Tailwind CSS"],
 			title: "Harmony Hub",
 			description:
-				"Harmony Hub is a cutting-edge music academy app built with Next.js. It transforms music education by providing an intuitive platform for students, teachers, and administrators. With features for interactive lessons, performance tracking, and streamlined administration, Harmony Hub enhances the learning experience and simplifies school management.(Aesa kuchh nhi h)",
+				"Harmony Hub is a cutting-edge music academy app built with Next.js. It transforms music education by providing an intuitive platform for students, teachers, and administrators. With features for interactive lessons, performance tracking, and streamlined administration, Harmony Hub enhances the learning experience and simplifies school management.",
 			githubLink: "https://github.com/alok-x0s1/Harmony-Hub",
 			liveLink: "https://harmony-hub-alok.vercel.app/",
 		},
@@ -44,14 +62,21 @@ const Page: React.FC = () => {
 				<h2
 					className={`${orbitron.className} text-2xl sm:text-3xl font-semibold mb-8`}
 				>
-					Projects, I created
+					Projects I Created
 				</h2>
 
-				<div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-12">
+				<motion.div
+					className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 sm:gap-12"
+					variants={containerVariants}
+					initial="hidden"
+					whileInView="visible"
+				>
 					{projects.map((project, index) => (
-						<Project key={index} {...project} />
+						<motion.div variants={projectVariants} key={index}>
+							<Project {...project} />
+						</motion.div>
 					))}
-				</div>
+				</motion.div>
 			</div>
 		</main>
 	);
