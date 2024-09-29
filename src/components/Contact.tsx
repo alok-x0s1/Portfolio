@@ -73,11 +73,11 @@ const Contact = () => {
 
 			<div className="social-links flex gap-4 sm:gap-6 lg:gap-8 justify-center items-center text-2xl sm:text-3xl">
 				{[
-					<FaGithub />,
-					<FaLinkedin />,
-					<FaTwitter />,
-					<FaInstagram />,
-					<FaFacebook />,
+					<FaGithub key="github" />,
+					<FaLinkedin key="linkedin" />,
+					<FaTwitter key="twitter" />,
+					<FaInstagram key="instagram" />,
+					<FaFacebook key="facebook" />,
 				].map((icon, index) => (
 					<motion.div
 						key={index}
