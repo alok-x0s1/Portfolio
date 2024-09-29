@@ -6,8 +6,10 @@ import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { ThemeToggle } from "./theme-provider";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
+	const [scrolled, setScrolled] = useState(false);
 	const [nav, setNav] = useState(false);
 
 	const links = [
@@ -34,9 +36,31 @@ const Navbar = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const offset = window.scrollY;
+			if (offset > 50) {
+				setScrolled(true);
+			} else {
+				setScrolled(false);
+			}
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	return (
-		<div className="fixed top-4 left-4 right-4 max-w-6xl mx-auto backdrop-blur-md rounded flex justify-between items-center px-6 py-3 z-50 border border-input">
-			{/* Logo Section */}
+		<div
+			className={cn(
+				"fixed top-4 left-4 right-4 max-w-6xl mx-auto backdrop-blur-md rounded flex justify-between items-center px-6 py-3 z-50 border",
+				scrolled
+					? "backdrop-blur-md border-border"
+					: "bg-background border-background"
+			)}
+		>
 			<div>
 				<h1
 					className={`${lobster.className} text-3xl font-semibold ml-2 hover:text-secondaryTextColor duration-500`}
@@ -47,7 +71,6 @@ const Navbar = () => {
 					</Link>
 				</h1>
 			</div>
-			{/* Desktop Menu */}
 			<ul className="hidden md:flex md:items-center">
 				{links.map(({ id, link }) => (
 					<li
