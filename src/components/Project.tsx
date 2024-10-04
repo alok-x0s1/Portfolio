@@ -10,7 +10,6 @@ interface ProjectProps {
 	liveLink: string;
 }
 
-// Animation Variants for Individual Project Cards
 const cardVariants = {
 	hover: {
 		scale: 1.02,
@@ -37,7 +36,6 @@ const Project: React.FC<ProjectProps> = ({
 			whileTap="tap"
 			variants={cardVariants}
 		>
-			{/* Stack Labels */}
 			<div className="flex flex-wrap gap-2 mb-2">
 				{stacks.map((stack, index) => (
 					<span
@@ -49,34 +47,27 @@ const Project: React.FC<ProjectProps> = ({
 				))}
 			</div>
 
-			{/* Project Title */}
 			<h2 className="text-base md:text-lg font-medium">{title}</h2>
 
-			{/* Project Description */}
 			<p className="text-sm md:text-base mb-4">{description}</p>
 
-			{/* Links to GitHub and Live Site */}
 			<div className="flex gap-5 justify-start items-center">
-				{/* GitHub Icon with Animation */}
 				<motion.a
 					href={githubLink}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-lg md:text-xl"
-					whileHover={{ scale: 1.2, color: "#f39c12" }} // Use a specific color like "#f39c12" or define it in your Tailwind config.
-					whileTap={{ scale: 0.9 }}
+					whileHover={{ scale: 1.2, color: "#f39c12" }}
 				>
 					<FaGithub />
 				</motion.a>
 
-				{/* Live Link Icon with Animation */}
 				<motion.a
 					href={liveLink}
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-lg md:text-xl"
 					whileHover={{ scale: 1.2, color: "#f39c12" }}
-					whileTap={{ scale: 0.9 }}
 				>
 					<FaExternalLinkAlt />
 				</motion.a>

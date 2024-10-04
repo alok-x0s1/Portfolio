@@ -6,15 +6,14 @@ import React from "react";
 import profilePic from "../../public/profile.jpeg";
 import Image from "next/image";
 import {
-	FaFacebook,
 	FaGithub,
 	FaInstagram,
 	FaLinkedin,
 	FaTwitter,
 } from "react-icons/fa";
+import { FaGitlab } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-// Animation Variants for Different Elements
 const containerVariants = {
 	hidden: { opacity: 0 },
 	visible: {
@@ -68,7 +67,6 @@ const HeroSection = () => {
 			variants={containerVariants}
 		>
 			<div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-				{/* Profile Image with Motion */}
 				<motion.div
 					className="h-40 w-40 sm:h-48 sm:w-48 overflow-hidden object-fill rounded shadow-sm shadow-input border border-input"
 					variants={imageVariants}
@@ -80,7 +78,6 @@ const HeroSection = () => {
 					/>
 				</motion.div>
 
-				{/* Hero Text Section */}
 				<motion.div className="flex-col flex gap-6 w-full sm:w-auto items-center sm:items-start">
 					<motion.div
 						className="text-center sm:text-start"
@@ -101,7 +98,6 @@ const HeroSection = () => {
 						</motion.p>
 					</motion.div>
 
-					{/* Social Links with Hover Animations */}
 					<div className="social-links flex flex-wrap gap-4 justify-center sm:justify-start items-center text-2xl cursor-pointer">
 						{[
 							{
@@ -112,14 +108,14 @@ const HeroSection = () => {
 								href: "https://www.linkedin.com/in/alok-x0s1",
 								icon: <FaLinkedin />,
 							},
+							{
+								href: "https://www.gitlab.com/mr_x0s1",
+								icon: <FaGitlab />,
+							},
 							{ href: "https://x.com", icon: <FaTwitter /> },
 							{
 								href: "https://www.instagram.com/mr_x0s1",
 								icon: <FaInstagram />,
-							},
-							{
-								href: "https://www.facebook.com",
-								icon: <FaFacebook />,
 							},
 						].map(({ href, icon }, index) => (
 							<motion.a
@@ -137,7 +133,6 @@ const HeroSection = () => {
 				</motion.div>
 			</div>
 
-			{/* Introduction Text */}
 			<motion.p
 				className="intro-text text-base sm:text-lg tracking-wide mt-4 leading-relaxed text-start md:text-center sm:text-left"
 				variants={textVariants}
@@ -153,7 +148,6 @@ const HeroSection = () => {
 				great.
 			</motion.p>
 
-			{/* Learn More Section */}
 			<motion.p
 				className="text-center text-lg sm:text-xl mt-6 cursor-pointer"
 				whileHover="hover"

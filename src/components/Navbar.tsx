@@ -9,7 +9,6 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-
 const navbarVariants = {
 	hidden: { opacity: 0, scale: 0.9 },
 	visible: {
@@ -105,7 +104,7 @@ const Navbar = () => {
 						variant="outline"
 						className="text-lg hover:text-secondaryTextColor duration-300"
 					>
-						<Link href="/projects" className="px-2">
+						<Link href="/resume" className="px-2">
 							Resume
 						</Link>
 					</Button>
@@ -167,7 +166,7 @@ const Navbar = () => {
 							variant="outline"
 							className="text-lg hover:text-secondaryTextColor duration-300"
 						>
-							<Link href="/projects" className="px-2">
+							<Link href="/resume" className="px-2">
 								Resume
 							</Link>
 						</Button>

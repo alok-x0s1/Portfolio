@@ -5,7 +5,6 @@ import React from "react";
 import Project from "./Project";
 import { motion } from "framer-motion";
 
-// Animation Variants for Projects
 const containerVariants = {
 	hidden: { opacity: 0 },
 	visible: {
@@ -35,28 +34,48 @@ const headingVariants = {
 const FeaturedProjects = () => {
 	const projects = [
 		{
-			stacks: ["React.js", "Tailwind CSS", "Javascript"],
-			title: "Playlist Pro",
+			stacks: [
+				"NextJs",
+				"MongoDB",
+				"TypeScript",
+				"Tailwind CSS",
+				"Framer Motion",
+			],
+			title: "ShrinkIt",
 			description:
-				"PlaylistPro is a solution for effortless playlist management. Input a playlist link to calculate total duration and video count. Customize filters for watching speeds from 0.25x to 2x and view video demos with thumbnails, durations, titles, and YouTube links. Enjoy efficient data handling, robust error management, and an intuitive user experience.",
-			githubLink: "https://github.com/alok-x0s1/PlaylistPro",
-			liveLink: "https://playlistpro-alok.vercel.app/",
+				"Developed a modern URL shortening application with advanced features including password protection, QR code generation, and link management. Implemented user authentication using built-in middleware and cookies. Utilized MongoDB with Mongoose for efficient data handling. Integrated TypeScript for improved type safety and maintainability.",
+			githubLink: "https://github.com/alok-x0s1/ShrinkIt",
+			liveLink: "https://shuck.vercel.app",
 		},
 		{
-			stacks: ["React.js", "Redux", "Tailwind CSS", "Appwrite"],
-			title: "Frontify",
+			stacks: [
+				"NextJs",
+				"MongoDB",
+				"NextAuth",
+				"OpenAI",
+				"Typescript",
+				"Tailwind CSS",
+			],
+			title: "Flickr",
 			description:
-				"Frontify is a dynamic blog website built with React on the frontend and utilizing Appwrite as a Backend-as-a-Service (BaaS) solution. Appwrite handles functionalities like user authentication, database management, and file storage, allowing you to focus on crafting a beautiful and engaging user experience with React.",
-			githubLink: "https://github.com/alok-x0s1/frontify",
-			liveLink: "https://ecommerceplatform.live",
+				"Flickr is an anonymous feedback app built with Next.js. Users can manage incoming messages through a dashboard, accepting or declining feedback. Share your profile link to receive anonymous messages. The app uses Tailwind CSS, Radix UI, NextAuth, and OpenAI for a secure and seamless experience.",
+			githubLink: "https://github.com/alok-x0s1/Flickr",
+			liveLink: "https://flickrrr.vercel.app",
 		},
 		{
-			stacks: ["React", "TypeScript", "Tailwind CSS"],
-			title: "Password Generator",
+			stacks: [
+				"React",
+				"Firebase",
+				"Stripe",
+				"Redux",
+				"ThreeJs",
+				"Tailwind CSS",
+			],
+			title: "Arise",
 			description:
-				"Introducing a sleek React Password Generator leveraging useRef, useEffect, and useCallback hooks. It automatically generates strong passwords, updates in real-time, and offers a quick copy feature for seamless integration.",
-			githubLink: "https://github.com/alok-x0s1/Password-Generator",
-			liveLink: "https://password-generator-alok.vercel.app",
+				"A React-based e-commerce platform that offers an immersive shopping experience. The app uses Firebase for the backend, handling user authentication, data storage, and real-time updates. Stripe is integrated for secure payment processing, with Firebase Cloud Functions generating clientSecrets.",
+			githubLink: "https://github.com/alok-x0s1/Arise",
+			liveLink: "https://a-rise-sigma.vercel.app",
 		},
 	];
 
