@@ -61,6 +61,11 @@ const config = {
 					"4": "hsl(var(--chart-4))",
 					"5": "hsl(var(--chart-5))",
 				},
+				blue: {
+					"1": "#4B28A4",
+					"2": "#371E77",
+					"3": "#1C033C",
+				},
 			},
 			borderRadius: {
 				lg: "var(--radius)",
