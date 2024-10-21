@@ -5,12 +5,7 @@ import Link from "next/link";
 import React from "react";
 import profilePic from "../../public/profile.jpeg";
 import Image from "next/image";
-import {
-	FaGithub,
-	FaInstagram,
-	FaLinkedin,
-	FaTwitter,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin, FaBitbucket } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -112,7 +107,10 @@ const HeroSection = () => {
 								href: "https://www.gitlab.com/mr_x0s1",
 								icon: <FaGitlab />,
 							},
-							{ href: "https://x.com", icon: <FaTwitter /> },
+							{
+								href: "https://bitbucket.org/alok-x0s1",
+								icon: <FaBitbucket />,
+							},
 							{
 								href: "https://www.instagram.com/mr_x0s1",
 								icon: <FaInstagram />,

@@ -134,7 +134,7 @@ const Navbar = () => {
 				className={`fixed md:hidden top-20 right-0 backdrop-blur-md bg-background h-fit p-8 w-1/2 transform border border-input ${
 					nav
 						? "translate-x-0 opacity-100"
-						: "translate-x-full opacity-0"
+						: "translate-x-full opacity-0 hidden"
 				} transition-all duration-500 ease-in-out origin-top-right rounded`}
 				variants={mobileMenuVariants}
 				initial="hidden"
