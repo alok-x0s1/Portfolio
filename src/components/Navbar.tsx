@@ -5,7 +5,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { ThemeToggle } from "./theme-provider";
-import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
@@ -43,6 +42,7 @@ const Navbar = () => {
 	const links = [
 		{ id: 1, link: "about" },
 		{ id: 2, link: "projects" },
+		{ id: 3, link: "resume" },
 	];
 
 	const handleResize = () => {
@@ -77,47 +77,34 @@ const Navbar = () => {
 			initial="hidden"
 			animate="visible"
 		>
-			{/* Logo */}
 			<motion.h1
-				className={`${lobster.className} text-3xl font-semibold ml-2 hover:text-secondaryTextColor duration-500`}
+				className={`${lobster.className} text-3xl font-semibold ml-2 text-secondaryTextColor hover:border-secondaryTextColor duration-500 rounded-full border border-transparent p-2 cursor-pointer`}
 				variants={linkVariants}
 			>
 				<Link href="/" rel="noreferrer">
-					<span>@lok</span>
-					<span className="text-secondaryTextColor">Ya∂av</span>
+					AY
 				</Link>
 			</motion.h1>
 
-			{/* Desktop Links */}
 			<ul className="hidden md:flex md:items-center">
 				{links.map(({ id, link }) => (
 					<motion.li
 						key={id}
-						className="nav-links px-2 mx-2 hover:text-secondaryTextColor duration-200 text-lg cursor-pointer capitalize"
+						className="nav-links px-2 mx-1 hover:text-secondaryTextColor duration-200 text-lg cursor-pointer capitalize"
 						variants={linkVariants}
 					>
 						<Link href={link}>{link}</Link>
 					</motion.li>
 				))}
-				<motion.li variants={linkVariants}>
-					<Button
-						variant="outline"
-						className="text-lg hover:text-secondaryTextColor duration-300"
-					>
-						<Link href="/resume" className="px-2">
-							Resume
-						</Link>
-					</Button>
-				</motion.li>
+
 				<motion.li
-					className="nav-links px-4 mx-2 py-2"
+					className="nav-links px-2 py-2"
 					variants={linkVariants}
 				>
 					<ThemeToggle />
 				</motion.li>
 			</ul>
 
-			{/* Mobile Menu Button */}
 			<motion.div
 				className="md:hidden cursor-pointer"
 				onClick={() => setNav(!nav)}
@@ -129,7 +116,6 @@ const Navbar = () => {
 				)}
 			</motion.div>
 
-			{/* Mobile Menu */}
 			<motion.div
 				className={`fixed md:hidden top-20 right-0 backdrop-blur-md bg-background h-fit p-8 w-1/2 transform border border-input ${
 					nav
@@ -158,19 +144,7 @@ const Navbar = () => {
 							<Link href={link}>{link}</Link>
 						</motion.li>
 					))}
-					<motion.li
-						onClick={() => setNav(false)}
-						variants={linkVariants}
-					>
-						<Button
-							variant="outline"
-							className="text-lg hover:text-secondaryTextColor duration-300"
-						>
-							<Link href="/resume" className="px-2">
-								Resume
-							</Link>
-						</Button>
-					</motion.li>
+
 					<motion.li
 						className="py-2 px-6 my-2"
 						onClick={() => setNav(false)}

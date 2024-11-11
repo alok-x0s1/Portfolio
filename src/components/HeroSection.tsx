@@ -132,7 +132,7 @@ const HeroSection = () => {
 			</div>
 
 			<motion.p
-				className="intro-text text-base sm:text-lg tracking-wide mt-4 leading-relaxed text-start md:text-center sm:text-left"
+				className="intro-text text-base sm:text-lg tracking-wide mt-4 leading-relaxed text-start  sm:text-left"
 				variants={textVariants}
 			>
 				I am a{" "}

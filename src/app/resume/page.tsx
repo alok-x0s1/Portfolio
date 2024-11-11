@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { DownloadIcon } from "lucide-react";
+import { orbitron } from "@/data/fonts";
 
 const Resume = () => {
 	return (
@@ -20,9 +21,11 @@ const Resume = () => {
 					transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
 					className="text-center"
 				>
-					<h1 className="text-4xl font-bold mb-2">
+					<h1
+						className={`text-4xl font-bold mb-2 ${orbitron.className}`}
+					>
 						My{" "}
-						<span className="text-secondaryTextColor">Resume</span>
+						<span className="text-secondaryTextColor/80">Resume</span>
 					</h1>
 				</motion.div>
 
@@ -30,7 +33,7 @@ const Resume = () => {
 					initial={{ scale: 0.95 }}
 					animate={{ scale: 1 }}
 					transition={{ delay: 0.4, type: "spring", stiffness: 100 }}
-					className="rounded-lg bg-white shadow-lg overflow-hidden hover:shadow-xl "
+					className="rounded-lg dark:bg-slate-200 shadow-lg overflow-hidden hover:shadow-xl "
 				>
 					<MyResume />
 				</motion.div>
@@ -145,10 +148,7 @@ const MyResume = () => {
 					</strong>{" "}
 					Git, Github, Vercel, Postman, TailwindCSS
 				</motion.li>
-				<motion.li
-					variants={itemVariants}
-					className="text-blue-3"
-				>
+				<motion.li variants={itemVariants} className="text-blue-3">
 					<strong className="font-medium text-blue-3">Other:</strong>{" "}
 					RESTful APIs, Redux, Axios, Stripe, Authentication &
 					Authorization

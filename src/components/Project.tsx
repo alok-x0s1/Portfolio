@@ -7,7 +7,7 @@ interface ProjectProps {
 	title: string;
 	description: string;
 	githubLink: string;
-	liveLink: string;
+	liveLink?: string;
 }
 
 const cardVariants = {
@@ -40,7 +40,7 @@ const Project: React.FC<ProjectProps> = ({
 				{stacks.map((stack, index) => (
 					<span
 						key={index}
-						className="text-secondaryTextColor text-sm md:text-base uppercase tracking-wide"
+						className="text-secondaryTextColor/90 text-sm md:text-base uppercase tracking-wide"
 					>
 						{stack}
 					</span>
@@ -62,15 +62,17 @@ const Project: React.FC<ProjectProps> = ({
 					<FaGithub />
 				</motion.a>
 
-				<motion.a
-					href={liveLink}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-lg md:text-xl"
-					whileHover={{ scale: 1.2, color: "#f39c12" }}
-				>
-					<FaExternalLinkAlt />
-				</motion.a>
+				{liveLink && (
+					<motion.a
+						href={liveLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-lg md:text-xl"
+						whileHover={{ scale: 1.2, color: "#f39c12" }}
+					>
+						<FaExternalLinkAlt />
+					</motion.a>
+				)}
 			</div>
 		</motion.div>
 	);

@@ -12,16 +12,14 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// Animation Variants for the footer
 const footerVariants = {
 	hidden: { opacity: 0, y: 20 },
 	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-// Animation Variants for the social links
 const socialLinkVariants = {
 	hover: {
-		y: -5, // Move up slightly on hover
+		y: -5,
 		transition: { duration: 0.3 },
 	},
 };
