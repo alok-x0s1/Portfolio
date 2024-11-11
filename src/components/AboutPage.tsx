@@ -2,13 +2,10 @@
 
 import { orbitron } from "@/data/fonts";
 import React from "react";
-import Typewriter from "typewriter-effect";
 import About from "./About";
-import TechStacks from "./TechStacks";
-import Tools from "./Tools";
 import { motion } from "framer-motion";
+import TechStacksAndTools from "./TechStacks";
 
-// Animation Variants
 const fadeInUp = {
 	hidden: { opacity: 0, y: 40 },
 	visible: {
@@ -31,47 +28,15 @@ const container = {
 const AboutPage = () => {
 	return (
 		<motion.div
-			className="flex flex-col w-full gap-6 mt-12 sm:mt-32 text-center"
+			className="flex flex-col w-full gap-6 text-center"
 			variants={container}
 			initial="hidden"
 			animate="visible"
 		>
-			<motion.h1
-				className={`${orbitron.className} text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight px-4 sm:px-8`}
-				variants={fadeInUp}
-				whileHover={{ scale: 1.04 }}
-				whileTap={{ scale: 0.98 }}
-			>
-				<Typewriter
-					options={{
-						strings: [
-							`Hello, I'm Alok <span class="text-secondaryTextColor">Yadav</span>.`,
-						],
-						autoStart: true,
-						loop: true,
-						delay: 75,
-					}}
-				/>
-			</motion.h1>
-
-			<motion.p
-				className="text-base sm:text-lg tracking-wide leading-relaxed px-4 sm:px-8"
-				variants={fadeInUp}
-			>
-				Glad to connect with you! 😄
-			</motion.p>
-
-			{/* About Section */}
 			<About />
+			<TechStacksAndTools />
 
-			{/* Tech Stacks Section */}
-			<TechStacks />
-
-			{/* Tools Section */}
-			<Tools />
-
-			{/* Get in Touch Section */}
-			<section className="flex flex-col gap-6 my-12 sm:my-16 items-center sm:items-start px-4 sm:px-8 lg:px-16">
+			<section className="flex flex-col gap-5 my-8 items-center sm:items-start">
 				<motion.h2
 					className={`${orbitron.className} text-2xl sm:text-3xl font-semibold`}
 					variants={fadeInUp}
