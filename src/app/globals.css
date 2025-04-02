@@ -72,6 +72,12 @@
 	display: none;
 }
 
-::selection {
-	display: none;
+* {
+	user-select: none;
+}
+
+@layer base {
+	.text-edge-outline {
+		-webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+	}
 }
