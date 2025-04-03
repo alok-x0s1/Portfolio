@@ -1,95 +1,44 @@
-"use client";
-
-import { orbitron } from "@/data/fonts";
-import React from "react";
-import { motion } from "framer-motion";
-import { techStacks, tools } from "@/data/projects";
-
-const iconVariants = {
-	hover: {
-		scale: 1.1,
-		rotate: [0, 5, -5, 0],
-		transition: { duration: 0.3, ease: "easeInOut" },
-	},
-};
-
-const aboutVariants = {
-	hidden: { opacity: 0, y: 20 },
-	visible: {
-		opacity: 1,
-		y: 0,
-		transition: { duration: 0.8, ease: "easeOut" },
-	},
-};
+import { techStacks } from "@/data/projects";
+import { CornerRightDown } from "lucide-react";
 
 const TechStacksAndTools = () => {
 	return (
-		<motion.div
-			className="flex flex-col mt-2 text-lg tracking-wide leading-snug w-full"
-			variants={aboutVariants}
-			initial="hidden"
-			whileInView="visible"
-			viewport={{ once: true }}
-		>
-			<h2
-				className={`${orbitron.className} text-3xl font-semibold text-center sm:text-left`}
-			>
+		<div className="w-full flex flex-col gap-2 text-base sm:text-lg tracking-wide leading-snug text-start">
+			<h2 className="font-display text-3xl font-semibold">
 				Professional{" "}
 				<span className="text-secondaryTextColor">skillset</span>
 			</h2>
 
-			<div className="mt-5 flex flex-col gap-6">
+			<div className="mt-4 flex flex-col gap-3 w-full text-zinc-300">
 				{techStacks.map((category) => (
-					<div key={category.name} className="flex items-center">
-						<h3 className="text-lg text-center sm:text-left">
+					<div
+						key={category.name}
+						className="flex flex-col sm:flex-row sm:items-center flex-wrap"
+					>
+						<h3 className="text-lg flex items-end">
 							{category.name}{" "}
-							<span className="text-secondaryTextColor mx-2 font-bold">
+							<span className="hidden sm:block text-secondaryTextColor mx-2 font-bold">
 								|
+							</span>
+							<span className="block sm:hidden text-secondaryTextColor mx-2 font-bold">
+								<CornerRightDown size={16} />
 							</span>
 						</h3>
 
-						<div className="flex flex-wrap justify-start gap-2">
+						<div className="flex gap-2 flex-wrap ml-6 sm:ml-0">
 							{category.skills.map((skill) => (
-								<motion.div
+								<p
 									key={skill}
-									className="text-base cursor-pointer"
-									variants={iconVariants}
-									whileHover="hover"
+									className="text-base cursor-pointer hover:text-secondaryTextColor duration-300"
 								>
-									<div className="hover:text-secondaryTextColor duration-300">
-										{skill}
-									</div>
-								</motion.div>
+									{skill}
+								</p>
 							))}
 						</div>
 					</div>
 				))}
-
-				<div className="flex items-center">
-					<h3 className="text-lg text-center sm:text-left">
-						Tools{" "}
-						<span className="text-secondaryTextColor mx-2 font-bold">
-							|
-						</span>
-					</h3>
-
-					<div className="flex flex-wrap justify-start gap-2">
-						{tools.map((tool) => (
-							<motion.div
-								key={tool}
-								className="text-base cursor-pointer"
-								variants={iconVariants}
-								whileHover="hover"
-							>
-								<div className="hover:text-secondaryTextColor duration-300">
-									{tool}
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
 			</div>
-		</motion.div>
+		</div>
 	);
 };
 

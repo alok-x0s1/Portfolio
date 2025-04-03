@@ -1,40 +1,43 @@
 "use client";
 
-import React from "react";
-import { orbitron } from "@/data/fonts";
-import Link from "next/link";
-import {
-	FaGithub,
-	FaLinkedin,
-	FaTwitter,
-	FaInstagram,
-	FaFacebook,
-} from "react-icons/fa";
+import { calSans } from "@/data/fonts";
+import { footerVariants, socialLinkVariants } from "@/data/framer-motion";
 import { motion } from "framer-motion";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { TbBrandLinktree } from "react-icons/tb";
 
-const footerVariants = {
-	hidden: { opacity: 0, y: 20 },
-	visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
-const socialLinkVariants = {
-	hover: {
-		y: -5,
-		transition: { duration: 0.3 },
+const footerLinks = [
+	{
+		id: 2,
+		icon: <Linkedin />,
+		href: "https://www.linkedin.com/in/alok-x0s1",
 	},
-};
+	{
+		id: 3,
+		icon: <Twitter />,
+		href: "https://x.com/alokdotcom",
+	},
+	{
+		id: 5,
+		icon: <Instagram />,
+		href: "https://www.instagram.com/mr_x0s1",
+	},
+	{
+		id: 6,
+		icon: <TbBrandLinktree />,
+		href: "https://linktr.ee/mr_x0s1",
+	},
+];
 
 const Contact = () => {
 	return (
 		<motion.footer
-			className="flex flex-col p-4 sm:p-6 lg:p-8 gap-6 sm:gap-8 lg:gap-10 w-full text-center border-t border-input"
+			className="flex flex-col p-4 sm:p-6 lg:p-8 gap-2 w-full text-center border-t border-input"
 			variants={footerVariants}
 			initial="hidden"
 			whileInView="visible"
 		>
-			<h5
-				className={`${orbitron.className} text-2xl sm:text-3xl lg:text-4xl mt-2 sm:mt-4 font-semibold tracking-tight`}
-			>
+			<h5 className="text-2xl sm:text-3xl lg:text-4xl mt-2 sm:my-4 font-semibold tracking-tight font-display">
 				Let&apos;s Collaborate 🤝
 			</h5>
 			<p className="text-base sm:text-lg lg:text-xl tracking-wide leading-snug">
@@ -43,8 +46,8 @@ const Contact = () => {
 			</p>
 
 			<a
-				href="mailto:alok421yadav@gmail.com"
-				className={`${orbitron.className} text-lg sm:text-xl lg:text-2xl font-semibold text-secondaryTextColor`}
+				href="mailto:yalok6321@gmail.com"
+				className="text-lg sm:text-xl lg:text-2xl font-semibold text-secondaryTextColor font-display"
 			>
 				<strong>
 					{" "}
@@ -52,37 +55,15 @@ const Contact = () => {
 				</strong>
 			</a>
 
-			<div className="links flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-base sm:text-lg">
-				{["/", "/about", "/projects", "/hello-world"].map(
-					(href, index) => (
-						<Link
-							key={index}
-							href={href}
-							className="hover:text-secondaryTextColor duration-300"
-						>
-							{href === "/"
-								? "Home"
-								: href.slice(1).charAt(0).toUpperCase() +
-								  href.slice(2)}
-						</Link>
-					)
-				)}
-			</div>
-
-			<div className="social-links flex gap-4 sm:gap-6 lg:gap-8 justify-center items-center text-2xl sm:text-3xl">
-				{[
-					<FaGithub key="github" />,
-					<FaLinkedin key="linkedin" />,
-					<FaTwitter key="twitter" />,
-					<FaInstagram key="instagram" />,
-					<FaFacebook key="facebook" />,
-				].map((icon, index) => (
+			<div className="social-links flex gap-4 sm:gap-6 lg:gap-8 justify-center items-center text-2xl sm:text-3xl mt-6">
+				{footerLinks.map((link) => (
 					<motion.div
-						key={index}
+						key={link.id}
 						variants={socialLinkVariants}
 						whileHover="hover"
+						onClick={() => window.open(link.href, "_blank")}
 					>
-						{icon}
+						{link.icon}
 					</motion.div>
 				))}
 			</div>

@@ -1,14 +1,13 @@
 import AboutPage from "@/components/AboutPage";
-import React from "react";
+import { Navigation } from "@/components/nav";
 
-const page = () => {
+export default function About() {
 	return (
-		<main className="min-h-screen antialiased">
-			<section className="w-full flex justify-center items-center pt-32 px-4 sm:px-8 lg:px-16 xl:px-32">
+		<div className="bg-primaryBgColor">
+			<Navigation current="about" />
+			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto pt-24">
 				<AboutPage />
-			</section>
-		</main>
+			</div>
+		</div>
 	);
-};
-
-export default page;
+}

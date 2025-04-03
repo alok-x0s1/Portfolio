@@ -31,7 +31,27 @@ const NotFound = () => {
 		},
 	};
 
-	const MotionLink = motion(Link);
+	const buttonVariants = {
+		hidden: { opacity: 0, x: 20 },
+		visible: {
+			opacity: 1,
+			x: 0,
+			transition: {
+				duration: 0.5,
+				type: "spring",
+				stiffness: 100,
+			},
+		},
+		shake: {
+			x: [0, -10, 0],
+			transition: {
+				duration: 0.5,
+				yoyo: Infinity,
+			},
+		},
+	};
+
+	const MotionLink = motion.create(Link);
 
 	return (
 		<div className="flex flex-col items-center justify-center h-screen p-4 text-center relative">
@@ -48,7 +68,7 @@ const NotFound = () => {
 				variants={bounceVariants}
 				initial="hidden"
 				whileInView="visible"
-				className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+				className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 font-display"
 			>
 				404 - Page Not Found
 			</motion.h1>
@@ -65,14 +85,14 @@ const NotFound = () => {
 			<MotionLink
 				href="/"
 				className="px-4 py-2 sm:px-6 sm:py-3 bg-secondaryTextColor rounded text-base sm:text-lg md:text-xl text-black border-2 border-secondaryTextColor hover:bg-secondaryTextColor/80 transition duration-300"
-				variants={bounceVariants}
+				variants={buttonVariants}
 				initial="hidden"
 				whileInView="visible"
 			>
 				Go back
 			</MotionLink>
 
-			<motion.p
+			{/* <motion.p
 				variants={bounceVariants}
 				initial="hidden"
 				whileInView="visible"
@@ -82,7 +102,7 @@ const NotFound = () => {
 				<span className="text-sm sm:text-base md:text-lg text-gray-500 mt-2">
 					{currentUrl}
 				</span>
-			</motion.p>
+			</motion.p> */}
 		</div>
 	);
 };

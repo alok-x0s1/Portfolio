@@ -1,9 +1,8 @@
-import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 interface ProjectProps {
-	stacks: string[];
+	date?: string;
 	title: string;
 	description: string;
 	githubLink: string;
@@ -11,11 +10,6 @@ interface ProjectProps {
 }
 
 const cardVariants = {
-	hover: {
-		scale: 1.02,
-		boxShadow: "0px 8px 16px rgba(0,0,0,0.2)",
-		transition: { duration: 0.4, ease: "easeInOut" },
-	},
 	tap: {
 		scale: 0.98,
 		transition: { type: "spring", stiffness: 300, damping: 15 },
@@ -23,7 +17,7 @@ const cardVariants = {
 };
 
 const Project: React.FC<ProjectProps> = ({
-	stacks,
+	date,
 	title,
 	description,
 	githubLink,
@@ -31,27 +25,36 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
 	return (
 		<motion.div
-			className="w-full border border-input rounded p-4 flex flex-col gap-2 tracking-wide leading-snug"
+			className="w-full border border-zinc-600 hover:border-zinc-400/50 rounded-lg p-4 md:p-6 flex flex-col gap-2 tracking-wide group duration-300"
 			whileHover="hover"
 			whileTap="tap"
 			variants={cardVariants}
 		>
-			<div className="flex flex-wrap gap-2 mb-2">
-				{stacks.map((stack, index) => (
-					<span
-						key={index}
-						className="text-secondaryTextColor/90 text-sm md:text-base uppercase tracking-wide"
+			<div className="text-xs text-zinc-100">
+				{date ? (
+					<time
+						className={`${
+							date === "2024-11-07" && "text-secondaryTextColor"
+						}`}
+						dateTime={new Date(date).toISOString()}
 					>
-						{stack}
-					</span>
-				))}
+						{Intl.DateTimeFormat(undefined, {
+							dateStyle: "medium",
+						}).format(new Date(date))}
+					</time>
+				) : (
+					<span>SOON</span>
+				)}
 			</div>
+			<h2 className="font-display tracking-wide text-2xl sm:text-3xl font-bold text-zinc-300 group-hover:text-white">
+				{title}
+			</h2>
 
-			<h2 className="text-base md:text-lg font-medium">{title}</h2>
+			<p className="mb-4 text-zinc-400 group-hover:text-zinc-300 leading-6 duration-300">
+				{description}
+			</p>
 
-			<p className="text-sm md:text-base mb-4">{description}</p>
-
-			<div className="flex gap-5 justify-start items-center">
+			<div className="flex gap-5 justify-start items-center text-end">
 				<motion.a
 					href={githubLink}
 					target="_blank"
