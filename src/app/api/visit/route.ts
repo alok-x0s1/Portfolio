@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
 			await redis.incr("visit_count");
 		}
 
-		const count = (await redis.get("visit_count")) || 0;
+		const count = parseInt((await redis.get("visit_count")) ?? "0", 10);
 		return NextResponse.json({ count });
 	} catch (error) {
 		console.error("Redis Error:", error);
