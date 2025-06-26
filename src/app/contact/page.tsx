@@ -1,6 +1,6 @@
 import { Card } from "@/components/card";
 import { Navigation } from "@/components/nav";
-import { Github, Gitlab, Mail, Twitter } from "lucide-react";
+import { Github, Gitlab, Mail } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/Contact";
 

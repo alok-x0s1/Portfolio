@@ -5,23 +5,25 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
 	title: {
-		default: "Alok Yadav",
-		template: "%s | Alok Yadav",
+		default: "alokYadav",
+		template: "%s | alokYadav",
 	},
 	description:
-		"Full Stack Developer | Passionate about web development and building scalable applications.",
+		"Full-stack developer & CS student building modern web apps with Next.js and TypeScript",
+
 	openGraph: {
-		title: "Alok Yadav - Full Stack Developer",
+		title: "alokYadav",
 		description:
-			"Passionate about web development and building scalable applications.",
+			"Full-stack developer & CS student building modern web apps with Next.js and TypeScript",
+
 		url: "https://yalok.vercel.app",
-		siteName: "Alok Yadav",
+		siteName: "alokYadav",
 		images: [
 			{
 				url: "https://yalok.vercel.app/og-image.png",
 				width: 1200,
 				height: 630,
-				alt: "Alok Yadav - Full Stack Developer",
+				alt: "alokYadav",
 			},
 		],
 		locale: "en-IN",
