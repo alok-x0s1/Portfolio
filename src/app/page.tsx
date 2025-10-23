@@ -6,6 +6,7 @@ export default async function Home() {
 	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/visit`, {
 		cache: "no-store",
 	});
+
 	const { count } = await res.json();
 	const visitCount = formatCount(count);
 
